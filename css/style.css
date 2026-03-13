@@ -1935,29 +1935,82 @@ code {
     display: none;
   }
 
-  .hamburger {
-    display: flex;
+  /* Hide theme toggle from nav bar on mobile — it's in the mobile menu */
+  .nav-inner > .theme-toggle {
+    display: none;
   }
 
-  /* Hero: stack vertically */
+  .hamburger {
+    display: flex;
+    margin-left: auto;
+  }
+
+  /* Theme toggle inside mobile menu */
+  .mobile-menu .mobile-theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    background: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    transition: color var(--transition), background var(--transition);
+  }
+
+  .mobile-menu .mobile-theme-toggle:hover {
+    color: var(--color-text);
+    background: var(--color-bg-inset);
+  }
+
+  /* CV/Awards pages: ensure left padding on mobile */
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .page-header .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* Hero: stack vertically, photo on top */
   .hero {
-    padding-top: calc(var(--nav-height) + 40px);
-    padding-bottom: 56px;
+    padding-top: calc(var(--nav-height) + 32px);
+    padding-bottom: 48px;
   }
 
   .hero-inner {
-    flex-direction: column-reverse;
-    gap: 28px;
-    align-items: flex-start;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+    text-align: center;
   }
 
   .hero-image {
-    width: 120px;
-    height: 120px;
+    width: 130px;
+    height: 130px;
   }
 
   .hero-name {
-    font-size: 1.875rem;
+    font-size: 1.75rem;
+  }
+
+  .hero-bio,
+  .hero-personal {
+    text-align: left;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .stats-row {
+    justify-content: center;
   }
 
   /* Timeline: collapse columns */
@@ -1993,13 +2046,24 @@ code {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Stats row: wrap tightly */
+  /* Stats row: compact grid on mobile */
   .stats-row {
-    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px 8px;
   }
 
   .stat-divider {
     display: none;
+  }
+
+  .stat-item {
+    text-align: center;
+  }
+
+  /* Contact links: 2-column on tablet */
+  .contact-links-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   /* Filter tabs: scrollable row */
@@ -2028,16 +2092,61 @@ code {
   }
 
   .social-links {
+    flex-wrap: wrap;
     gap: 6px;
   }
 
+  .social-link {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
   .hero-image {
-    width: 96px;
-    height: 96px;
+    width: 110px;
+    height: 110px;
+  }
+
+  .hero-name {
+    font-size: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: 0.9375rem;
+  }
+
+  .hero-bio,
+  .hero-personal {
+    font-size: 0.875rem;
+  }
+
+  .stats-row {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px 6px;
+  }
+
+  .stat-num {
+    font-size: 1.125rem;
+  }
+
+  .stat-label {
+    font-size: 0.625rem;
   }
 
   .research-card-image {
     height: 140px;
+  }
+
+  /* Contact links: single column on small */
+  .contact-links-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title {
+    font-size: 1.5rem;
+  }
+
+  .section-title {
+    font-size: 1.125rem;
   }
 }
 

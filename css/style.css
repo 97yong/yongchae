@@ -709,6 +709,8 @@ code {
 .container {
   max-width: var(--page-max);
   margin: 0 auto;
+  padding-left: var(--page-pad);
+  padding-right: var(--page-pad);
 }
 
 

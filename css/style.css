@@ -674,9 +674,6 @@ code {
 .page-header {
   padding-top: calc(var(--nav-height) + 56px);
   padding-bottom: 32px;
-  padding-left: var(--page-pad);
-  padding-right: var(--page-pad);
-  max-width: calc(var(--page-max) + var(--page-pad) * 2);
   margin: 0 auto;
 }
 
@@ -699,10 +696,7 @@ code {
 
 /* Research section container */
 .research-section {
-  padding-left: var(--page-pad);
-  padding-right: var(--page-pad);
   padding-bottom: 80px;
-  max-width: calc(var(--page-max) + var(--page-pad) * 2);
   margin: 0 auto;
 }
 
@@ -1982,11 +1976,12 @@ code {
   }
 
   .theme-toggle {
-    margin-left: auto;
+    display: none;
   }
 
   .hamburger {
     display: flex;
+    margin-left: auto;
   }
 
   /* Hero: stack vertically, photo on top */

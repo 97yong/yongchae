@@ -1,0 +1,515 @@
+{
+  "journals": [
+    {
+      "id": "J11",
+      "title": "Physics-guided deep ensemble learning for the remaining useful life prediction of machine tools using kernel density estimation",
+      "authors": "Kim, Y.C., Kim, B., Kim, M., Lee, S.K., Jung, J.H., & Youn, B.D.",
+      "year": "Online Published",
+      "venue": "International Journal of Precision Engineering and Manufacturing-Green Technology",
+      "index": "SCIE",
+      "impactFactor": 5.6,
+      "rank": "11.8%",
+      "firstAuthor": true,
+      "link": "https://doi.org/10.1007/s40684-025-00827-9"
+    },
+    {
+      "id": "J10",
+      "title": "ARDiff: An Adaptive Reverse-Step Diffusion Framework for Unsupervised Vibration Signal Denoising with Frequency Attention",
+      "authors": "Kim, J., Kim, Y.C., Lee, J., Baek, J., Jung, J.H., & Youn, B.D.",
+      "year": "2026.01",
+      "venue": "Mechanical Systems and Signal Processing",
+      "index": "SCIE",
+      "impactFactor": 8.9,
+      "rank": "3.0%",
+      "firstAuthor": false,
+      "link": "https://doi.org/10.1016/j.ymssp.2025.113726"
+    },
+    {
+      "id": "J9",
+      "title": "Battery Maximum Available Capacity Estimation in Partial Charge Curve with Current Charge State Invariant Feature",
+      "authors": "Kim, B., Kim, Y.C., Choi, H., Kim, T., & Youn, B.D.",
+      "year": "2025.12",
+      "venue": "Journal of Energy Storage",
+      "index": "SCIE",
+      "impactFactor": 9.8,
+      "rank": "14.0%",
+      "firstAuthor": false,
+      "link": "https://doi.org/10.1016/j.est.2025.118726"
+    },
+    {
+      "id": "J8",
+      "title": "Deep learning-based cross-domain tacholess instantaneous speed estimation of rotating machinery with a selective multi-order frequency",
+      "authors": "Kim, M., Kim, Y.C., Park, J., Yoo, J., Kim, T., Ha, J.M., & Youn, B.D.",
+      "year": "2025.10",
+      "venue": "IEEE Sensors Journal",
+      "index": "SCIE",
+      "impactFactor": 4.5,
+      "rank": "19.6%",
+      "firstAuthor": false,
+      "link": "https://doi.org/10.1109/JSEN.2025.3607036"
+    },
+    {
+      "id": "J7",
+      "title": "Latent Space Alignment based Domain Adaptation (LSADA) for Fault Diagnosis of Rotating Machinery",
+      "authors": "Kim, Y.C., Ko, J.U., Lee, J., Kim, T., Jung, J.H., & Youn, B.D.",
+      "year": "2024.10",
+      "venue": "Advanced Engineering Informatics",
+      "index": "SCIE",
+      "impactFactor": 9.9,
+      "rank": "2.0%",
+      "firstAuthor": true,
+      "link": "https://doi.org/10.1016/j.aei.2024.102862"
+    },
+    {
+      "id": "J6",
+      "title": "Spectrum-guided GAN with Density-Directionality Sampling: Diverse High-fidelity Signal Generation for Fault Diagnosis of Rotating Machinery",
+      "authors": "Kim, T., Ko, J.U., Lee, J., Kim, Y.C., Jung, J.H., & Youn, B.D.",
+      "year": "2024.10",
+      "venue": "Advanced Engineering Informatics",
+      "index": "SCIE",
+      "impactFactor": 9.9,
+      "rank": "2.0%",
+      "firstAuthor": false,
+      "link": "https://doi.org/10.1016/j.aei.2024.102821"
+    },
+    {
+      "id": "J5",
+      "title": "Gradient Alignment based Partial Domain Adaptation (GAPDA) using a domain knowledge filter for fault diagnosis of bearing",
+      "authors": "Kim, Y.C., Lee, J., Kim, T., Baek, J., Ko, J.U., Jung, J.H., & Youn, B.D.",
+      "year": "2024.10",
+      "venue": "Reliability Engineering & System Safety",
+      "index": "SCIE",
+      "impactFactor": 11.0,
+      "rank": "1.4%",
+      "firstAuthor": true,
+      "link": "https://doi.org/10.1016/j.ress.2024.110293"
+    },
+    {
+      "id": "J4",
+      "title": "Domain Adaptation with Label-Aligned Sampling (DALAS) for Cross-Domain Fault Diagnosis Under Class Imbalance",
+      "authors": "Lee, J., Ko, J.U., Kim, T., Kim, Y.C., Jung, J.H., & Youn, B.D.",
+      "year": "2024.06",
+      "venue": "Expert Systems with Applications",
+      "index": "SCIE",
+      "impactFactor": 7.5,
+      "rank": "6.1%",
+      "firstAuthor": false,
+      "link": "https://doi.org/10.1016/j.eswa.2023.122910"
+    },
+    {
+      "id": "J3",
+      "title": "Frequency-learning generative network (FLGN) to generate signals of variable lengths",
+      "authors": "Ko, J.U., Lee, J., Kim, T., Kim, Y.C., & Youn, B.D.",
+      "year": "2023.10",
+      "venue": "Expert Systems with Applications",
+      "index": "SCIE",
+      "impactFactor": 7.5,
+      "rank": "6.1%",
+      "firstAuthor": false,
+      "link": "https://doi.org/10.1016/j.eswa.2023.120255"
+    },
+    {
+      "id": "J2",
+      "title": "Domain Adaptation based Fault Diagnosis under Variable Operating Conditions of a Rock Drill",
+      "authors": "Kim, Y.C., Kim, T., Ko, J.U., Lee, J., & Kim, K.",
+      "year": "2023.07",
+      "venue": "International Journal of Prognostics and Health Management",
+      "index": "ESCI",
+      "impactFactor": 1.0,
+      "firstAuthor": true,
+      "link": "https://doi.org/10.36001/ijphm.2023.v14i2.3425"
+    },
+    {
+      "id": "J1",
+      "title": "Deep-learning-based Fault Detection and Recipe Optimization for a Plastic Injection Molding Process Under the Class Imbalance Problem",
+      "authors": "Ko, J.U., Lee, J., Kim, T., Kim, Y.C., & Youn, B.D.",
+      "year": "2023.04",
+      "venue": "Journal of Computational Design and Engineering",
+      "index": "SCIE",
+      "impactFactor": 6.1,
+      "rank": "6.6%",
+      "firstAuthor": false,
+      "link": "https://doi.org/10.1093/jcde/qwad011"
+    }
+  ],
+  "submitted": [
+    {
+      "id": "J12",
+      "title": "Physics-aware Continuously Indexed Domain Adaptation for Rotating Machinery Fault Diagnosis",
+      "authors": "Kim, Y.C., Kim, J., Park, M., Lim, U., Jung, J.H., & Youn, B.D.",
+      "year": "Submitted",
+      "venue": "Engineering Applications of Artificial Intelligence",
+      "index": "SCIE",
+      "impactFactor": 8.0,
+      "rank": "2.6%",
+      "firstAuthor": true
+    },
+    {
+      "id": "J13",
+      "title": "Guide-Flow: Hierarchical Prototype Guidance Flow-Matching for Target Sound Extraction",
+      "authors": "Kim, J., Kim, Y.C., Park, M., Lim, U., Jung, J.H., & Youn, B.D.",
+      "year": "In Preparation",
+      "venue": "",
+      "firstAuthor": false
+    }
+  ],
+  "conferences": [
+    {
+      "id": "ICP1",
+      "title": "Domain Adaptation based Fault Diagnosis under Variable Operating Conditions of a Rock Drill",
+      "authors": "Kim, Y.C., Kim, T., Ko, J.U., Lee, J., Kim, K., & Youn, B.D.",
+      "year": "2022.11",
+      "venue": "Annual Conference of the Prognostics and Health Management Society 2022",
+      "location": "Nashville, USA",
+      "firstAuthor": true,
+      "award": "2nd Place Winner in 2022 PHM Society Data Challenge"
+    },
+    {
+      "id": "ICP2",
+      "title": "Inter-class Metric Learning based Depth-wise Convolutional Neural Network for Gear Fault Diagnosis",
+      "authors": "Kim, Y.C., Lee, S., Lee, S.K., Kim, B., Lee, J., Lee, J., & Youn, B.D.",
+      "year": "2023.06",
+      "venue": "2023 IEEE Conference on Prognostics and Health Management",
+      "location": "Montreal, Canada",
+      "firstAuthor": true,
+      "award": "1st Place Winner in 2023 ICPHM Data Challenge"
+    },
+    {
+      "id": "ICP3",
+      "title": "Hybrid Approach of Xgboost and Rule-based Model for Fault Detection and Severity Estimation in Spacecraft Propulsion System",
+      "authors": "Lee, S.K., Lee, J., Lee, S., Kim, B., Kim, Y.C., Lee, J., & Youn, B.D.",
+      "year": "2023.09",
+      "venue": "Asia Pacific Conference of the Prognostics and Health Management Society 2023",
+      "location": "Tokyo, Japan",
+      "firstAuthor": false,
+      "award": "2nd Place Winner in 2023 PHM Asia Pacific Data Challenge"
+    },
+    {
+      "id": "ICP4",
+      "title": "Sequential Domain Adaptation for Fault Diagnosis in Rotating Machinery",
+      "authors": "Kim, Y.C., Ko, J.U., Lee, J., Kim, T., Jung, J.H., & Youn, B.D.",
+      "year": "2023.09",
+      "venue": "Asia Pacific Conference of the Prognostics and Health Management Society 2023",
+      "location": "Tokyo, Japan",
+      "firstAuthor": true
+    },
+    {
+      "id": "ICP5",
+      "title": "AI-Driven Diagnosis of Aircraft Anomalies using Flight Data Correlation Errors",
+      "authors": "Lee, D., Kim, Y.C., Gwon, G.R., & Youn, B.D.",
+      "year": "2023.11",
+      "venue": "14th International Symposium on NDT in Aerospace",
+      "location": "Busan, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "ICP6",
+      "title": "Synthetic Signal Generation Framework for Fault Diagnosis of Rotating Machinery with Limited Fault Data",
+      "authors": "Kim, T., Ko, J.U., Lee, J., Kim, Y.C., Youn, B.D., & Jung, J.H.",
+      "year": "2024.08",
+      "venue": "ASME IDETC-CIE 2024",
+      "location": "Washington, D.C., USA",
+      "firstAuthor": false
+    },
+    {
+      "id": "ICP7",
+      "title": "Partial Transfer Learning Using Domain Knowledge Filter for Fault Diagnosis of Bearing",
+      "authors": "Kim, Y.C., Lee, J., Kim, T., Baek, J., Ko, J.U., Jung, J.H., & Youn, B.D.",
+      "year": "2025.08",
+      "venue": "ASME IDETC-CIE 2025",
+      "location": "Anaheim, California, USA",
+      "firstAuthor": true
+    },
+    {
+      "id": "ICP8",
+      "title": "Signal Reconstruction of Rotating Machinery Using a Frequency-Focused and Reverse Step-Aware Diffusion Model",
+      "authors": "Kim, J., Kim, Y.C., Baek, J., Lee, J., Jung, J.H., & Youn, B.D.",
+      "year": "2025.08",
+      "venue": "ASME IDETC-CIE 2025",
+      "location": "Anaheim, California, USA",
+      "firstAuthor": false
+    }
+  ],
+  "domesticConferences": [
+    {
+      "id": "DCP1",
+      "title": "Pseudo-labeling-based Domain Adaptation for Fault Diagnosis in Rotating Machinery",
+      "authors": "Kim, Y.C., Ko, J.U., Lee, J., Kim, T., & Youn, B.D.",
+      "year": "2022.05",
+      "venue": "KSME 2022 Spring Annual Meeting",
+      "location": "Busan, Korea",
+      "firstAuthor": true
+    },
+    {
+      "id": "DCP2",
+      "title": "AI-based optimization of plastic injection molding process using class imbalanced data",
+      "authors": "Ko, J.U., Lee, J., Kim, T., Kim, Y.C., & Youn, B.D.",
+      "year": "2022.05",
+      "venue": "KSME 2022 Spring Annual Meeting",
+      "location": "Busan, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP3",
+      "title": "Latent Space Analysis of GAN for Reliable Signal Generation in Rotating Machinery",
+      "authors": "Kim, T., Ko, J.U., Lee, J., Kim, Y.C., & Youn, B.D.",
+      "year": "2022.05",
+      "venue": "KSME 2022 Spring Annual Meeting",
+      "location": "Busan, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP4",
+      "title": "Sampling-based Unsupervised Domain Adaptation for Fault Diagnosis of Rotating Machinery Under Various Working Condition with Class Imbalance",
+      "authors": "Lee, J., Ko, J.U., Kim, T., Kim, Y.C., & Youn, B.D.",
+      "year": "2022.05",
+      "venue": "KSME 2022 Spring Annual Meeting",
+      "location": "Busan, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP5",
+      "title": "Sampling-based Unsupervised Domain Adaptation for Fault Diagnosis of Rotating Machinery",
+      "authors": "Lee, J., Ko, J.U., Kim, T., Kim, Y.C., & Youn, B.D.",
+      "year": "2022.06",
+      "venue": "PHM Korea 2022",
+      "location": "Seoul, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP6",
+      "title": "Unseen Signal Generation Through Latent Space Analysis of GAN in Rotating Machinery",
+      "authors": "Kim, T., Ko, J.U., Lee, J., Kim, Y.C., & Youn, B.D.",
+      "year": "2022.07",
+      "venue": "PHM Korea 2022",
+      "location": "Seoul, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP7",
+      "title": "Instance Distance in Latent Space based Domain Adaptation for Fault Diagnosis in Rotating Machinery",
+      "authors": "Kim, Y.C., Ko, J.U., Lee, J., Kim, T., & Youn, B.D.",
+      "year": "2022.11",
+      "venue": "KSME 2022 Annual Meeting",
+      "location": "Jeju, Korea",
+      "firstAuthor": true
+    },
+    {
+      "id": "DCP8",
+      "title": "A Study of Cross-Domain Fault Diagnosis of Rotating Machinery Under Data Imbalance Condition",
+      "authors": "Lee, J., Ko, J.U., Kim, T., Kim, Y.C., Baek, J., Jung, J.H., & Youn, B.D.",
+      "year": "2023.05",
+      "venue": "KSME 2023 Spring Annual Meeting",
+      "location": "Busan, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP9",
+      "title": "An Improvement of Generative Adversarial Networks for Maximizing Performance of Fault Diagnosis under Limited Data",
+      "authors": "Kim, T., Ko, J.U., Lee, J., Kim, Y.C., Baek, J., Jung, J.H., & Youn, B.D.",
+      "year": "2023.05",
+      "venue": "KSME 2023 Spring Annual Meeting",
+      "location": "Busan, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP10",
+      "title": "Multi-source Domain Adaptation based Fault Diagnosis under Variable Operating Conditions of a Hydraulic Rock Drill",
+      "authors": "Kim, Y.C., Kim, T., Ko, J.U., Lee, J., Kim, K., & Youn, B.D.",
+      "year": "2023.05",
+      "venue": "KSME 2023 Spring Annual Meeting",
+      "location": "Busan, Korea",
+      "firstAuthor": true
+    },
+    {
+      "id": "DCP11",
+      "title": "Metric Learning based Gear Fault Diagnosis for Real-time Signals",
+      "authors": "Kim, Y.C., Lee, S., Lee, S.K., Kim, B., Lee, J., Lee, J., & Youn, B.D.",
+      "year": "2023.07",
+      "venue": "PHM Korea 2023",
+      "location": "Seoul, Korea",
+      "firstAuthor": true
+    },
+    {
+      "id": "DCP12",
+      "title": "Cost Reduction Strategies for Military Equipment Operation and Maintenance through Fault Diagnosis Based on Computer Vision",
+      "authors": "Baek, J., Lee, J., Kim, T., Kim, Y.C., Jung, J.H., & Youn, B.D.",
+      "year": "2023.10",
+      "venue": "16th International Army Modeling and Simulation Education Conference",
+      "location": "Daejeon, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP13",
+      "title": "Partial Transfer Learning using Envelope Filter for Fault Diagnosis of Bearing",
+      "authors": "Kim, Y.C., Lee, J., Kim, T., Baek, J., Ko, J.U., Jung, J.H., & Youn, B.D.",
+      "year": "2023.11",
+      "venue": "KSME 2023 Annual Meeting",
+      "location": "Incheon, Korea",
+      "firstAuthor": true
+    },
+    {
+      "id": "DCP14",
+      "title": "Deep-learning-based Generative Model with Improved Quality and Diversity under Limited Data",
+      "authors": "Kim, T., Lee, J., Kim, Y.C., Baek, J., Kim, J., Jung, J.H., & Youn, B.D.",
+      "year": "2024.03",
+      "venue": "KSME 2024 Spring Annual Meeting - Reliability Division",
+      "location": "Yeosu, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP15",
+      "title": "Feature Engineering of Incremental Capacity Analysis Data for State-of-Health Estimation of Lithium-Ion Batteries",
+      "authors": "Kim, B., Choi, H., Kim, Y.C., Gwan, G.R., Kim, T., & Youn, B.D.",
+      "year": "2024.05",
+      "venue": "KSME 2024 Spring Annual Meeting",
+      "location": "Jeju, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP16",
+      "title": "Transformer-Based Prediction of Tool Remaining Useful Life in CNC Milling Machines Using Physical Knowledge",
+      "authors": "Kim, Y.C., Kim, B., Kim, M., Lee, S.K., Jung, J.H., & Youn, B.D.",
+      "year": "2024.05",
+      "venue": "KSME 2024 Spring Annual Meeting",
+      "location": "Jeju, Korea",
+      "firstAuthor": true
+    },
+    {
+      "id": "DCP17",
+      "title": "Multi-Source Domain Adaptation based on Dual-Level Weighting for Fault Diagnosis of Rotating Machinery",
+      "authors": "Lee, J., Kim, T., Kim, Y.C., Baek, J., Kim, J., Jung, J.H., & Youn, B.D.",
+      "year": "2024.06",
+      "venue": "PHM Korea 2024",
+      "location": "Seoul, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP18",
+      "title": "Vision-based Motion Magnification and Temporal Bandpass Filter for Anomaly Detection of Rotating Machinery",
+      "authors": "Baek, J., Lee, J., Kim, T., Kim, Y.C., Kim, J., Jung, J.H., & Youn, B.D.",
+      "year": "2024.06",
+      "venue": "PHM Korea 2024",
+      "location": "Seoul, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP19",
+      "title": "Development of a noise estimation and Diffusion model-based restoration network for denoising rotational vibration signals",
+      "authors": "Kim, J., Lee, J., Kim, T., Kim, Y.C., Baek, J., Jung, J.H., & Youn, B.D.",
+      "year": "2024.11",
+      "venue": "KSME 2024 Annual Meeting",
+      "location": "Jeju, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP20",
+      "title": "Detection of Rotating Machinery Anomalies Using Video-Based Motion Amplification and Temporal Bandpass Filtering",
+      "authors": "Baek, J., Lee, J., Kim, T., Kim, Y.C., Kim, J., Jung, J.H., & Youn, B.D.",
+      "year": "2024.11",
+      "venue": "KSME 2024 Annual Meeting",
+      "location": "Jeju, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP21",
+      "title": "Bearing Condition Estimation Framework using Object Detection for Data Drift Management",
+      "authors": "Kim, Y.C., Kim, J., Jung, J.H., & Youn, B.D.",
+      "year": "2025.05",
+      "venue": "KSME 2025 Spring Annual Meeting",
+      "location": "Jeju, Korea",
+      "firstAuthor": true
+    },
+    {
+      "id": "DCP22",
+      "title": "Hyper-Autonomous Smart Manufacturing: Deep Learning-Based Failure Prediction and Optimal Candidate Selection",
+      "authors": "Kim, J., Kim, Y.C., Gwon, G.R., Song, W., Jung, J.H., & Youn, B.D.",
+      "year": "2025.05",
+      "venue": "KSME 2025 Spring Annual Meeting",
+      "location": "Jeju, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP23",
+      "title": "A Real-time Framework for Anomaly Detection in Vehicle Video Using Face Tracking and 3D Similarity Measurement",
+      "authors": "Joo, N., Kim, Y.C., Song, W., & Youn, B.D.",
+      "year": "2025.06",
+      "venue": "PHM Korea 2025",
+      "location": "Jeju, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP24",
+      "title": "Development of a Spectrum-Guided Autoencoder for Target Sound Extraction in Mixed Acoustic Signals of Rotating Machinery",
+      "authors": "Kim, J., Kim, Y.C., Park, M., Jung, J.H., & Youn, B.D.",
+      "year": "2025.06",
+      "venue": "PHM Korea 2025",
+      "location": "Jeju, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP25",
+      "title": "Development of a Bearing Condition Tracking Algorithm Using Frequency Band-Based Features from Simulated Signals",
+      "authors": "Kim, Y.C., Kim, J., Park, M., Jung, J.H., & Youn, B.D.",
+      "year": "2025.06",
+      "venue": "PHM Korea 2025",
+      "location": "Jeju, Korea",
+      "firstAuthor": true
+    },
+    {
+      "id": "DCP26",
+      "title": "A Method for Extracting Bearing Target Sounds from Audio with Environmental Noise",
+      "authors": "Park, M., Kim, T., Kim, Y.C., Kim, J., Lim, U., Jung, J.H., & Youn, B.D.",
+      "year": "2025.12",
+      "venue": "KSME 2025 Annual Meeting",
+      "location": "Jeongseon, Korea",
+      "firstAuthor": false
+    }
+  ],
+  "patents": {
+    "registered": [
+      {
+        "id": "PR1",
+        "title": "Method for Training Fault Detection Model of Injection Molding Process and Method for Optimizing Recipe of Injection Molding Process",
+        "authors": "Youn, B.D., Ko, J.U., Lee, J., Kim, T., & Kim, Y.C.",
+        "year": 2022,
+        "country": "Republic of Korea",
+        "number": "10-2479531"
+      }
+    ],
+    "applications": [
+      {
+        "id": "PA1",
+        "title": "Fault Diagnosis Apparatus and Methods for Rotating Mechanical System",
+        "authors": "Youn, B.D., Lee, J., Kim, T., Kim, Y.C., & Baek, J.",
+        "year": 2024,
+        "country": "Republic of Korea",
+        "number": "10-2024-0048216"
+      },
+      {
+        "id": "PA2",
+        "title": "Fault Diagnosis Apparatus and Method Using Latent Space Alignment Based Domain Adaptation",
+        "authors": "Youn, B.D., Kim, Y.C., Lee, J., Kim, T., Ko, J.U., & Jung, J.H.",
+        "year": 2024,
+        "country": "Republic of Korea",
+        "number": "10-2024-0125101"
+      },
+      {
+        "id": "PA3",
+        "title": "Fault Diagnosis Apparatus and Method for Rotating Machine System",
+        "authors": "Youn, B.D., Kim, Y.C., Lee, J., Kim, T., Ko, J.U., Baek, J., & Jung, J.H.",
+        "year": 2025,
+        "country": "Republic of Korea",
+        "number": "10-2025-0083506"
+      },
+      {
+        "id": "PA4",
+        "title": "Apparatus and Method for Generating Fault Data for Rotating Machine Fault Diagnosis",
+        "authors": "Youn, B.D., Kim, T., Ko, J.U., Lee, J., & Kim, Y.C.",
+        "year": 2025,
+        "country": "Republic of Korea",
+        "number": "10-2025-0103568"
+      }
+    ]
+  }
+}

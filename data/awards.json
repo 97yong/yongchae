@@ -1,0 +1,143 @@
+{
+  "competitions": [
+    {
+      "title": "Silver Award",
+      "event": "The 4th KSME–LG Future HomeTech Challenge",
+      "year": 2025
+    },
+    {
+      "title": "Encouragement Award",
+      "event": "The 5th K-Artificial Intelligence Manufacturing Data Analysis Competition",
+      "year": 2025
+    },
+    {
+      "title": "Silver Award",
+      "event": "KSME CAE and Applied Mechanics Division — Student Competition",
+      "year": 2025
+    },
+    {
+      "title": "Best Paper Award",
+      "event": "Korean Society of Mechanical Engineers — Reliability Division",
+      "year": 2025
+    },
+    {
+      "title": "Top Award",
+      "event": "KSME CAE and Applied Mechanics Division — Student Competition",
+      "year": 2024
+    },
+    {
+      "title": "Top Award",
+      "event": "Factory Hack Korea 2024",
+      "year": 2024
+    },
+    {
+      "title": "Encouragement Award",
+      "event": "POSTECH Open Innovation Big Data Challenge",
+      "year": 2023
+    },
+    {
+      "title": "2nd Place Winner",
+      "event": "PHM Asia Pacific 2023 Data Challenge",
+      "year": 2023
+    },
+    {
+      "title": "1st Place Winner",
+      "event": "2023 IEEE ICPHM Data Challenge",
+      "year": 2023
+    },
+    {
+      "title": "Excellence Award",
+      "event": "POSTECH Open Innovation Big Data Challenge",
+      "year": 2022
+    },
+    {
+      "title": "2nd Place Winner",
+      "event": "PHM Society 2022 Data Challenge",
+      "year": 2022
+    },
+    {
+      "title": "Encouragement Award",
+      "event": "Hyundai Heavy Industries — 2nd Shipbuilding/Marine Big Data/AI Contest",
+      "year": 2022
+    },
+    {
+      "title": "Excellence Award",
+      "event": "Community-Based Problem-Solving Curriculum Performance Presentation",
+      "year": 2021
+    },
+    {
+      "title": "Excellence Award",
+      "event": "2021 AIM Field Competition",
+      "year": 2021
+    }
+  ],
+  "scholarships": [
+    {
+      "title": "AI Young Researcher",
+      "org": "Yulchon Foundation of the Nongshim Group",
+      "period": "2025.09",
+      "amount": "KRW 8,000,000"
+    },
+    {
+      "title": "Research Scholarship for Ph.D. Studies",
+      "org": "National Research Foundation of Korea",
+      "period": "2024.09 – 2026.08",
+      "amount": "KRW 50,000,000"
+    },
+    {
+      "title": "Kwanjeong Educational Foundation Scholarship",
+      "org": "Kwanjeong Educational Foundation",
+      "period": "2022.03 – 2024.02",
+      "amount": "KRW 22,000,000"
+    },
+    {
+      "title": "SNU Fellowship (4th BK21 Outstanding Graduate Student)",
+      "org": "Seoul National University",
+      "period": "2022.03 – 2023.02",
+      "amount": "KRW 12,000,000"
+    },
+    {
+      "title": "National Graduate Science & Technology Scholarship",
+      "org": "Korea Student Aid Foundation (KOSAF)",
+      "period": "2016.03 – 2022.02",
+      "amount": "KRW 40,000,000"
+    }
+  ],
+  "honors": [
+    {
+      "title": "Summa Cum Laude Award",
+      "institution": "Yonsei University",
+      "year": "2022.02"
+    },
+    {
+      "title": "Academic Highest Honor Award",
+      "institution": "Yonsei University",
+      "year": "2021.08"
+    },
+    {
+      "title": "Academic Highest Honor Award",
+      "institution": "Yonsei University",
+      "year": "2021.02"
+    },
+    {
+      "title": "Academic High Honor Award",
+      "institution": "Yonsei University",
+      "year": "2020.08"
+    },
+    {
+      "title": "Academic Highest Honor Award",
+      "institution": "Yonsei University",
+      "year": "2020.02"
+    },
+    {
+      "title": "Academic Highest Honor Award",
+      "institution": "Yonsei University",
+      "year": "2019.08"
+    },
+    {
+      "title": "Academic High Honor Award",
+      "institution": "Yonsei University",
+      "year": "2017.02"
+    }
+  ]
+}

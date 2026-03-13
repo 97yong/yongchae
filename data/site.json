@@ -1,0 +1,108 @@
+{
+  "name": "Yong Chae Kim",
+  "nameKo": "김용채",
+  "title": "Ph.D. Candidate",
+  "affiliation": "Mechanical Engineering, Seoul National University",
+  "email": "313nara@snu.ac.kr",
+  "profileImage": "images/profile/반명함.jpg",
+  "bio": "I am conducting research on applying deep learning to solve industrial challenges in mechanical systems (e.g., rotating machinery, motors, batteries). My research areas include fault diagnosis, signal generation, and denoising using domain adaptation, diffusion models, generative models, and physics-informed neural networks.",
+  "personalNote": "I am from South Korea. I am passionate about exploring new places through travel, finding fulfillment in meaningful work, and building strong connections with people.",
+  "social": {
+    "github": "https://github.com/97yong",
+    "linkedin": "https://www.linkedin.com/in/yong-chae-kim-89720b229",
+    "googleScholar": "https://scholar.google.com/citations?user=qex9tLkAAAAJ&hl=ko&authuser=1",
+    "researchGate": "https://www.researchgate.net/profile/Yong-Kim-109",
+    "orcid": "https://orcid.org/0000-0003-3712-3314",
+    "labHomepage": "https://hai.snu.ac.kr/"
+  },
+  "education": [
+    {
+      "degree": "Ph.D. in Mechanical Engineering",
+      "institution": "Seoul National University",
+      "location": "Seoul, Republic of Korea",
+      "period": "2022.03 – Present",
+      "gpa": "4.04 / 4.3",
+      "adviser": "Dr. Byeng Dong Youn",
+      "dissertation": "Domain Knowledge Embedded Artificial Intelligence Based Data Drift Management (Expected)"
+    },
+    {
+      "degree": "B.S. in Mechanical Engineering",
+      "institution": "Yonsei University",
+      "location": "Seoul, Republic of Korea",
+      "period": "2016.03 – 2022.02",
+      "gpa": "4.21 / 4.3",
+      "honors": "Graduated with Highest Honor (1/142)",
+      "thesis": "Fault Detection of Rolling Bearing based on Machine Learning"
+    }
+  ],
+  "experience": [
+    {
+      "role": "Freelancer",
+      "organization": "onepredict Inc., Seoul",
+      "period": "2024.02 – 2024.04",
+      "description": "Advisory on IPO Technology Development Strategy"
+    },
+    {
+      "role": "Internship",
+      "organization": "onepredict Inc., Seoul",
+      "period": "2023.06 – 2023.12",
+      "description": "PdX, Data Scientist Team"
+    },
+    {
+      "role": "Undergraduate Internship",
+      "organization": "Seoul National University, HAI Lab",
+      "period": "2020.12 – 2022.02",
+      "description": "Hyperautonomy Artificial Intelligence Lab"
+    },
+    {
+      "role": "Undergraduate Internship",
+      "organization": "Yonsei University, MESL Lab",
+      "period": "2020.07 – 2020.08",
+      "description": "Multiphysics Energy System Laboratory"
+    }
+  ],
+  "projects": [
+    {
+      "title": "Development of Core Technologies for Manufacturing Foundation Models",
+      "funder": "KEIT",
+      "period": "2025.07 – Present"
+    },
+    {
+      "title": "Domain Knowledge Embedded AI-Based Data Drift Management",
+      "funder": "NRF",
+      "period": "2024.09 – Present",
+      "note": "PI"
+    },
+    {
+      "title": "Development and Demonstration of PBV using Design Platforms",
+      "funder": "KEIT",
+      "period": "2024.07 – Present"
+    },
+    {
+      "title": "Development of Deep Learning Framework",
+      "funder": "onepredict Inc.",
+      "period": "2024.08 – 2024.10"
+    },
+    {
+      "title": "AI-Driven Diagnosis of Aircraft Anomalies Using Flight Data",
+      "funder": "Korea Aerospace Industries, Ltd.",
+      "period": "2022.03 – 2024.06"
+    }
+  ],
+  "teaching": [
+    {
+      "course": "Probabilistic Engineering Analysis and Design",
+      "role": "Teaching Assistant",
+      "period": "2024.03 – 2024.06"
+    }
+  ],
+  "reviewer": [
+    "International Journal of Prognostics and Health Management",
+    "Engineering Applications of Artificial Intelligence",
+    "International Journal of Precision Engineering and Manufacturing-Green Technology",
+    "Scientific Reports",
+    "Reliability Engineering & System Safety",
+    "Expert Systems with Applications",
+    "ISA Transactions"
+  ]
+}

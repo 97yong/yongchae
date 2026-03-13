@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Awards | Yong Chae Kim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Yong Chae Kim</a>
+      <div class="nav-links">
+        <a href="index.html"    data-page="index">Home</a>
+        <a href="cv.html"       data-page="cv">CV</a>
+        <a href="research.html" data-page="research">Research</a>
+        <a href="awards.html"   data-page="awards">Awards</a>
+        <a href="contact.html"  data-page="contact">Contact</a>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Switch to dark mode">&#9789;</button>
+      <button id="navToggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"    data-page="index">Home</a>
+    <a href="cv.html"       data-page="cv">CV</a>
+    <a href="research.html" data-page="research">Research</a>
+    <a href="awards.html"   data-page="awards">Awards</a>
+    <a href="contact.html"  data-page="contact">Contact</a>
+  </div>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title fade-in">Awards & Honors</h1>
+        <p class="page-subtitle fade-in" data-delay="1">Data challenge awards, scholarships, and academic honors.</p>
+      </div>
+    </section>
+
+    <!-- Competition Awards - rendered by JS -->
+    <section class="awards-section">
+      <div class="container">
+        <h2 class="section-title fade-in">Competition Awards</h2>
+        <div id="awardsList" class="awards-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Scholarships -->
+    <section class="awards-section">
+      <div class="container">
+        <h2 class="section-title fade-in">Scholarships</h2>
+        <div class="scholarship-list">
+          <div class="scholarship-item fade-in">
+            <div class="scholarship-title">AI Young Researcher</div>
+            <div class="scholarship-desc">Yulchon Foundation of the Nongshim Group · 2025.09 · KRW 8,000,000</div>
+          </div>
+          <div class="scholarship-item fade-in" data-delay="1">
+            <div class="scholarship-title">Research Scholarship for Ph.D. Studies</div>
+            <div class="scholarship-desc">National Research Foundation of Korea · 2024.09 – 2026.08 · KRW 50,000,000</div>
+          </div>
+          <div class="scholarship-item fade-in" data-delay="2">
+            <div class="scholarship-title">Kwanjeong Educational Foundation Scholarship</div>
+            <div class="scholarship-desc">Kwanjeong Educational Foundation · 2022.03 – 2024.02 · KRW 22,000,000</div>
+          </div>
+          <div class="scholarship-item fade-in" data-delay="3">
+            <div class="scholarship-title">SNU Fellowship (4th BK21 Outstanding Graduate Student)</div>
+            <div class="scholarship-desc">Seoul National University · 2022.03 – 2023.02 · KRW 12,000,000</div>
+          </div>
+          <div class="scholarship-item fade-in" data-delay="4">
+            <div class="scholarship-title">National Graduate Science & Technology Scholarship</div>
+            <div class="scholarship-desc">Korea Student Aid Foundation (KOSAF) · 2016.03 – 2022.02 · KRW 40,000,000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Academic Honors -->
+    <section class="awards-section">
+      <div class="container">
+        <h2 class="section-title fade-in">Academic Honors</h2>
+        <div class="honors-list">
+          <div class="honor-item fade-in">
+            <div class="honor-title">Summa Cum Laude Award</div>
+            <div class="honor-meta">Yonsei University · 2022.02</div>
+          </div>
+          <div class="honor-item fade-in" data-delay="1">
+            <div class="honor-title">Academic Highest Honor Award</div>
+            <div class="honor-meta">Yonsei University · 2021.08</div>
+          </div>
+          <div class="honor-item fade-in" data-delay="2">
+            <div class="honor-title">Academic Highest Honor Award</div>
+            <div class="honor-meta">Yonsei University · 2021.02</div>
+          </div>
+          <div class="honor-item fade-in" data-delay="3">
+            <div class="honor-title">Academic High Honor Award</div>
+            <div class="honor-meta">Yonsei University · 2020.08</div>
+          </div>
+          <div class="honor-item fade-in" data-delay="4">
+            <div class="honor-title">Academic Highest Honor Award</div>
+            <div class="honor-meta">Yonsei University · 2020.02</div>
+          </div>
+          <div class="honor-item fade-in" data-delay="5">
+            <div class="honor-title">Academic Highest Honor Award</div>
+            <div class="honor-meta">Yonsei University · 2019.08</div>
+          </div>
+          <div class="honor-item fade-in" data-delay="6">
+            <div class="honor-title">Academic High Honor Award</div>
+            <div class="honor-meta">Yonsei University · 2017.02</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Yong Chae Kim. All rights reserved.</p>
+    <p>Seoul National University &middot; <a href="https://hai.snu.ac.kr/" target="_blank" rel="noopener">HAI Lab</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const data = await loadJSON('data/awards.json');
+      renderAwards('awardsList', data);
+    });
+  </script>
+</body>
+</html>

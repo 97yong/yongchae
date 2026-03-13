@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Research | Yong Chae Kim</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Yong Chae Kim</a>
+      <div class="nav-links">
+        <a href="index.html"    data-page="index">Home</a>
+        <a href="cv.html"       data-page="cv">CV</a>
+        <a href="research.html" data-page="research">Research</a>
+        <a href="awards.html"   data-page="awards">Awards</a>
+        <a href="contact.html"  data-page="contact">Contact</a>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Switch to dark mode">&#9789;</button>
+      <button id="navToggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"    data-page="index">Home</a>
+    <a href="cv.html"       data-page="cv">CV</a>
+    <a href="research.html" data-page="research">Research</a>
+    <a href="awards.html"   data-page="awards">Awards</a>
+    <a href="contact.html"  data-page="contact">Contact</a>
+  </div>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title fade-in">Research</h1>
+        <p class="page-subtitle fade-in" data-delay="1">I am conducting AI-based PHM (Prognostics and Health Management) research in the field of mechanical engineering.</p>
+      </div>
+    </section>
+
+    <section class="research-section">
+      <div class="container">
+        <div class="filter-tabs fade-in">
+          <button class="filter-btn active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="first">First Author</button>
+          <button class="filter-btn" data-filter="co">Co-Author</button>
+          <button class="filter-btn" data-filter="ongoing">On-going</button>
+          <button class="filter-btn" data-filter="project">Projects</button>
+        </div>
+
+        <div id="researchGrid" class="research-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Yong Chae Kim. All rights reserved.</p>
+    <p>Seoul National University &middot; <a href="https://hai.snu.ac.kr/" target="_blank" rel="noopener">HAI Lab</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const data = await loadJSON('data/research.json');
+      renderResearch('researchGrid', data);
+    });
+  </script>
+</body>
+</html>

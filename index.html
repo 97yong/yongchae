@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yong Chae Kim | Ph.D. Candidate, SNU</title>
+  <meta name="description" content="Yong Chae Kim - Ph.D. Candidate in Mechanical Engineering at Seoul National University. Research on deep learning for fault diagnosis, domain adaptation, and signal generation." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVIGATION
+       ============================================================ -->
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand">Yong Chae Kim</a>
+      <div class="nav-links">
+        <a href="index.html"    data-page="index">Home</a>
+        <a href="cv.html"       data-page="cv">CV</a>
+        <a href="research.html" data-page="research">Research</a>
+        <a href="awards.html"   data-page="awards">Awards</a>
+        <a href="contact.html"  data-page="contact">Contact</a>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Switch to dark mode">&#9789;</button>
+      <button id="navToggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu drawer -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html"    data-page="index">Home</a>
+    <a href="cv.html"       data-page="cv">CV</a>
+    <a href="research.html" data-page="research">Research</a>
+    <a href="awards.html"   data-page="awards">Awards</a>
+    <a href="contact.html"  data-page="contact">Contact</a>
+  </div>
+
+  <!-- ============================================================
+       HERO
+       ============================================================ -->
+  <section class="hero">
+    <div class="hero-inner">
+
+      <!-- Profile photo -->
+      <div class="hero-image-wrap">
+        <img
+          class="hero-image"
+          id="heroProfileImage"
+          src="images/profile/반명함.jpg"
+          alt="Yong Chae Kim"
+        />
+      </div>
+
+      <!-- Text column -->
+      <div class="hero-content">
+        <h1 class="hero-name">Yong Chae Kim</h1>
+        <p class="hero-title">Ph.D. Candidate &middot; Mechanical Engineering &middot; Seoul National University</p>
+        <p class="hero-bio">I am conducting research on applying deep learning to solve industrial challenges in mechanical systems (e.g., rotating machinery, motors, batteries). My research areas include fault diagnosis, signal generation, and denoising using domain adaptation, diffusion models, generative models, and physics-informed neural networks.</p>
+        <p class="hero-personal">I am from South Korea. I am passionate about exploring new places through travel, finding fulfillment in meaningful work, and building strong connections with people.</p>
+
+        <!-- Social links -->
+        <div class="social-links">
+          <a href="https://github.com/97yong" class="social-link" target="_blank" rel="noopener" aria-label="GitHub">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/>
+            </svg>
+            GitHub
+          </a>
+          <a href="https://www.linkedin.com/in/yong-chae-kim-89720b229" class="social-link" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a href="https://scholar.google.com/citations?user=qex9tLkAAAAJ&hl=ko&authuser=1" class="social-link" target="_blank" rel="noopener" aria-label="Google Scholar">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M5.242 13.769L0 9.5 12 0l12 9.5-5.242 4.269C17.548 11.249 14.978 9.5 12 9.5c-2.977 0-5.548 1.748-6.758 4.269zM12 10a7 7 0 100 14 7 7 0 000-14z"/>
+            </svg>
+            Google Scholar
+          </a>
+          <a href="mailto:313nara@snu.ac.kr" class="social-link" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+            </svg>
+            Email
+          </a>
+        </div>
+
+        <!-- Stats row (auto-populated from JSON) -->
+        <div class="stats-row">
+          <div class="stat-item">
+            <span class="stat-num" id="statJournals">—</span>
+            <span class="stat-label">Journal Papers</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-num" id="statIntlConf">—</span>
+            <span class="stat-label">Int'l Conf.</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-num" id="statDomConf">—</span>
+            <span class="stat-label">Domestic Conf.</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-num" id="statAwards">—</span>
+            <span class="stat-label">Awards</span>
+          </div>
+          <div class="stat-divider" aria-hidden="true"></div>
+          <div class="stat-item">
+            <span class="stat-num" id="statPatents">—</span>
+            <span class="stat-label">Patents</span>
+          </div>
+        </div>
+
+      </div><!-- /hero-content -->
+    </div><!-- /hero-inner -->
+  </section>
+
+
+  <!-- ============================================================
+       RESEARCH STRUCTURE GRAPH
+       ============================================================ -->
+  <section class="research-graph-section">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title fade-in">Research Overview</h2>
+        <p class="section-subtitle fade-in" data-delay="1">Interactive map of research areas and their connections. <a href="research.html">Explore details &rarr;</a></p>
+      </div>
+      <div class="research-graph-wrap fade-in" data-delay="2">
+        <svg id="researchGraph" viewBox="0 0 900 520" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SELECTED PUBLICATIONS
+       ============================================================ -->
+  <main class="page-main" style="padding-top: 0; padding-bottom: 0;">
+    <div class="page-container">
+
+      <!-- Selected Publications -->
+      <section style="margin-bottom: 56px;">
+        <div class="section-header">
+          <h2 class="section-title fade-in">Selected Publications</h2>
+          <p class="section-subtitle fade-in" data-delay="1">Representative first-author journal articles. <a href="cv.html">Full list on CV page &rarr;</a></p>
+        </div>
+
+        <div class="pub-list">
+
+          <!-- J11 -->
+          <div class="pub-item fade-in">
+            <div class="pub-id-col">
+              <span class="pub-id">J11</span>
+            </div>
+            <div class="pub-content">
+              <div class="pub-title">
+                Physics-guided deep ensemble learning for remaining useful life prediction
+              </div>
+              <div class="pub-authors"><strong class="self">Kim, Y.C.</strong>, Kim, B., Kim, M., Lee, S.K., Jung, J.H., &amp; Youn, B.D.</div>
+              <div class="pub-meta">
+                <span class="pub-venue">Int'l J. Precision Eng. and Manufacturing-Green Technology</span>
+                <span class="pub-year">2025</span>
+                <span class="pill-index">SCIE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- J7 -->
+          <div class="pub-item fade-in" data-delay="1">
+            <div class="pub-id-col">
+              <span class="pub-id">J7</span>
+            </div>
+            <div class="pub-content">
+              <div class="pub-title">
+                Latent Space Alignment based Domain Adaptation (LSADA)
+              </div>
+              <div class="pub-authors"><strong class="self">Kim, Y.C.</strong>, Ko, J.U., Lee, J., Kim, T., Jung, J.H., &amp; Youn, B.D.</div>
+              <div class="pub-meta">
+                <span class="pub-venue">Advanced Engineering Informatics</span>
+                <span class="pub-year">2024</span>
+                <span class="pill-index">SCIE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- J5 -->
+          <div class="pub-item fade-in" data-delay="2">
+            <div class="pub-id-col">
+              <span class="pub-id">J5</span>
+            </div>
+            <div class="pub-content">
+              <div class="pub-title">
+                Gradient Alignment based Partial Domain Adaptation (GAPDA)
+              </div>
+              <div class="pub-authors"><strong class="self">Kim, Y.C.</strong>, Lee, J., Kim, T., Baek, J., Ko, J.U., Jung, J.H., &amp; Youn, B.D.</div>
+              <div class="pub-meta">
+                <span class="pub-venue">Reliability Engineering &amp; System Safety</span>
+                <span class="pub-year">2024</span>
+                <span class="pill-index">SCIE</span>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /pub-list -->
+
+        <div style="margin-top: 24px;">
+          <a href="cv.html" class="btn btn-outline">View all publications &rarr;</a>
+        </div>
+      </section>
+
+
+    </div><!-- /page-container -->
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer class="site-footer">
+    <p>&copy; 2025 Yong Chae Kim. All rights reserved.</p>
+    <p>Seoul National University &middot; <a href="https://hai.snu.ac.kr/" target="_blank" rel="noopener">HAI Lab</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      // Apply profile image adjustments from site.json
+      try {
+        const data = await loadJSON('data/site.json');
+        const img = document.getElementById('heroProfileImage');
+        if (img && data.profileImage) img.src = data.profileImage;
+        if (img && data.profileImageAdjust) {
+          const adj = data.profileImageAdjust;
+          img.style.transformOrigin = (adj.posX ?? 50) + '% ' + (adj.posY ?? 50) + '%';
+          if (adj.zoom && adj.zoom !== 100) {
+            img.style.transform = 'scale(' + (adj.zoom / 100) + ')';
+          }
+        }
+      } catch(e) {}
+
+      // Auto-populate stats from JSON data
+      try {
+        const [pub, awards] = await Promise.all([
+          loadJSON('data/publications.json'),
+          loadJSON('data/awards.json')
+        ]);
+        const jCount = (pub.journals || []).length;
+        const intlCount = (pub.conferences || []).length;
+        const domCount = (pub.domesticConferences || []).length;
+        const aCount = (awards.competitions || []).length;
+        const pCount = (pub.patents ? (pub.patents.registered || []).length + (pub.patents.applications || []).length : 0);
+        document.getElementById('statJournals').textContent = jCount;
+        document.getElementById('statIntlConf').textContent = intlCount;
+        document.getElementById('statDomConf').textContent = domCount;
+        document.getElementById('statAwards').textContent = aCount;
+        document.getElementById('statPatents').textContent = pCount;
+      } catch(e) {}
+    });
+  </script>
+  <script>
+    // Interactive Force-Directed Research Graph
+    document.addEventListener('DOMContentLoaded', function () {
+      var svg = document.getElementById('researchGraph');
+      if (!svg) return;
+      var wrap = svg.closest('.research-graph-wrap');
+      var W = 900, H = 520;
+
+      // Category colors
+      var colors = {
+        center: '#4F46E5',
+        da: '#3B82F6',
+        sg: '#10B981',
+        prog: '#F59E0B',
+        app: '#EF4444'
+      };
+
+      // All nodes: { id, label, sub, x, y, r, type, branch, desc, fixed }
+      var nodes = [
+        { id: 'center', label: 'Deep Learning', sub: 'for PHM', x: 450, y: 260, r: 42, type: 'center', branch: 'center', fixed: true },
+        // Domain Adaptation
+        { id: 'da', label: 'Domain', sub: 'Adaptation', x: 200, y: 140, r: 34, type: 'branch', branch: 'da' },
+        { id: 'lsada', label: 'LSADA', sub: 'J7 · 2024', x: 70, y: 60, r: 26, type: 'leaf', branch: 'da', desc: 'Latent Space Alignment Domain Adaptation for unsupervised fault diagnosis' },
+        { id: 'gapda', label: 'GAPDA', sub: 'J5 · 2024', x: 80, y: 230, r: 26, type: 'leaf', branch: 'da', desc: 'Gradient Alignment Partial Domain Adaptation with domain knowledge filter' },
+        { id: 'dalas', label: 'DALAS', sub: 'J4 · 2023', x: 200, y: 30, r: 26, type: 'leaf', branch: 'da', desc: 'Label-aligned sampling for imbalanced cross-domain fault diagnosis' },
+        // Signal Generation
+        { id: 'sg', label: 'Signal', sub: 'Generation', x: 700, y: 140, r: 34, type: 'branch', branch: 'sg' },
+        { id: 'flgn', label: 'FLGN', sub: 'J3 · 2023', x: 700, y: 30, r: 26, type: 'leaf', branch: 'sg', desc: 'Frequency-learning generative network for variable-length vibration signals' },
+        { id: 'gan', label: 'Spectrum-GAN', sub: 'J6 · 2024', x: 830, y: 60, r: 26, type: 'leaf', branch: 'sg', desc: 'Spectral loss & density-directionality sampling for fault signal generation' },
+        { id: 'ardiff', label: 'ARDiff', sub: 'J10 · 2025', x: 830, y: 220, r: 26, type: 'leaf', branch: 'sg', desc: 'Adaptive reverse-step diffusion for unsupervised vibration denoising' },
+        // Prognostics
+        { id: 'prog', label: 'Prognostics', sub: '& RUL', x: 260, y: 420, r: 34, type: 'branch', branch: 'prog' },
+        { id: 'kde', label: 'KDE Ensemble', sub: 'J11 · 2025', x: 120, y: 470, r: 26, type: 'leaf', branch: 'prog', desc: 'Physics-guided transformer ensemble with KDE for tool remaining useful life' },
+        { id: 'batt', label: 'Battery MAC', sub: 'J9 · 2025', x: 300, y: 490, r: 26, type: 'leaf', branch: 'prog', desc: 'Partial charge matrix framework for battery maximum available capacity' },
+        // Industrial Applications
+        { id: 'app', label: 'Industrial', sub: 'Applications', x: 640, y: 420, r: 34, type: 'branch', branch: 'app' },
+        { id: 'mfm', label: 'Mfg. FM', sub: 'Project', x: 560, y: 490, r: 26, type: 'leaf', branch: 'app', desc: 'Large-scale multimodal foundation model for manufacturing data' },
+        { id: 'pbv', label: 'PBV Road', sub: 'Project', x: 700, y: 490, r: 26, type: 'leaf', branch: 'app', desc: 'Deep learning for road diagnostics: anomaly detection & pothole identification' },
+        { id: 'air', label: 'Aircraft PHM', sub: 'Project', x: 810, y: 460, r: 26, type: 'leaf', branch: 'app', desc: 'Flight data recorder analysis with autoencoder for engine anomaly detection' }
+      ];
+
+      // Edges: [sourceId, targetId]
+      var edges = [
+        ['center','da'],['center','sg'],['center','prog'],['center','app'],
+        ['da','lsada'],['da','gapda'],['da','dalas'],
+        ['sg','flgn'],['sg','gan'],['sg','ardiff'],
+        ['prog','kde'],['prog','batt'],
+        ['app','mfm'],['app','pbv'],['app','air']
+      ];
+
+      var nodeMap = {};
+      nodes.forEach(function(n) { n.vx = 0; n.vy = 0; nodeMap[n.id] = n; });
+
+      // SVG helper
+      function el(tag, attrs) {
+        var e = document.createElementNS('http://www.w3.org/2000/svg', tag);
+        for (var k in attrs) e.setAttribute(k, attrs[k]);
+        return e;
+      }
+
+      // Defs: gradients & glow filter
+      var defs = el('defs', {});
+      // Glow filter
+      defs.innerHTML =
+        '<filter id="glow" x="-50%" y="-50%" width="200%" height="200%">' +
+          '<feGaussianBlur stdDeviation="3" result="blur"/>' +
+          '<feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>' +
+        '</filter>';
+      svg.appendChild(defs);
+
+      // Edge layer
+      var edgeLayer = el('g', { class: 'rg-edge-layer' });
+      svg.appendChild(edgeLayer);
+      // Node layer
+      var nodeLayer = el('g', { class: 'rg-node-layer' });
+      svg.appendChild(nodeLayer);
+
+      // Draw edges as paths (curved)
+      var edgeEls = [];
+      edges.forEach(function(e) {
+        var path = el('path', { class: 'rg-edge', 'data-branch': nodeMap[e[1]].branch, 'data-src': e[0], 'data-tgt': e[1] });
+        edgeLayer.appendChild(path);
+        edgeEls.push({ src: e[0], tgt: e[1], el: path });
+      });
+
+      function updateEdge(ee) {
+        var s = nodeMap[ee.src], t = nodeMap[ee.tgt];
+        var mx = (s.x + t.x) / 2, my = (s.y + t.y) / 2;
+        var dx = t.x - s.x, dy = t.y - s.y;
+        var len = Math.sqrt(dx*dx + dy*dy) || 1;
+        var off = len * 0.15;
+        var cx = mx + (-dy / len) * off;
+        var cy = my + (dx / len) * off;
+        ee.el.setAttribute('d', 'M' + s.x + ',' + s.y + ' Q' + cx + ',' + cy + ' ' + t.x + ',' + t.y);
+      }
+
+      // Draw nodes
+      var nodeEls = [];
+      nodes.forEach(function(n) {
+        var g = el('g', { class: 'rg-node-group', 'data-id': n.id, 'data-branch': n.branch, style: 'cursor:grab' });
+
+        // Circle
+        var c = el('circle', {
+          cx: 0, cy: 0, r: n.r,
+          class: 'rg-circle rg-circle-' + n.type,
+          fill: n.type === 'center' ? colors.center : (n.type === 'branch' ? colors[n.branch] : 'var(--color-bg-card, var(--color-bg))'),
+          stroke: colors[n.branch],
+          'stroke-width': n.type === 'leaf' ? 2 : 0
+        });
+        g.appendChild(c);
+
+        // Pulse ring for center
+        if (n.type === 'center') {
+          var pulse = el('circle', { cx: 0, cy: 0, r: n.r, class: 'rg-pulse', fill: 'none', stroke: colors.center, 'stroke-width': 2, opacity: 0.4 });
+          g.insertBefore(pulse, c);
+        }
+
+        // Label
+        var label = el('text', { x: 0, y: n.sub ? -4 : 2, class: 'rg-label rg-label-' + n.type });
+        label.textContent = n.label;
+        g.appendChild(label);
+
+        if (n.sub) {
+          var sub = el('text', { x: 0, y: 10, class: 'rg-sublabel rg-sublabel-' + n.type });
+          sub.textContent = n.sub;
+          g.appendChild(sub);
+        }
+
+        g.setAttribute('transform', 'translate(' + n.x + ',' + n.y + ')');
+        nodeLayer.appendChild(g);
+        n.el = g;
+        nodeEls.push(n);
+      });
+
+      // Tooltip
+      var tooltip = document.createElement('div');
+      tooltip.className = 'rg-tooltip';
+      tooltip.innerHTML = '<div class="rg-tooltip-title"></div><div class="rg-tooltip-desc"></div>';
+      wrap.appendChild(tooltip);
+
+      function showTooltip(n) {
+        if (!n.desc) return;
+        var rect = wrap.getBoundingClientRect();
+        var svgRect = svg.getBoundingClientRect();
+        var sx = svgRect.width / W, sy = svgRect.height / H;
+        var px = n.x * sx + svgRect.left - rect.left;
+        var py = n.y * sy + svgRect.top - rect.top;
+        tooltip.querySelector('.rg-tooltip-title').textContent = n.label;
+        tooltip.querySelector('.rg-tooltip-desc').textContent = n.desc;
+        tooltip.style.left = Math.max(8, Math.min(px - 130, rect.width - 270)) + 'px';
+        tooltip.style.top = (py - n.r * sy - 68) + 'px';
+        tooltip.classList.add('visible');
+      }
+      function hideTooltip() { tooltip.classList.remove('visible'); }
+
+      // Hover highlighting
+      nodes.forEach(function(n) {
+        n.el.addEventListener('mouseenter', function() {
+          n.el.classList.add('hovered');
+          edgeEls.forEach(function(ee) {
+            if (ee.src === n.id || ee.tgt === n.id || ee.src === n.branch || (n.type === 'branch' && nodeMap[ee.tgt].branch === n.id)) {
+              ee.el.classList.add('active');
+            }
+          });
+          showTooltip(n);
+        });
+        n.el.addEventListener('mouseleave', function() {
+          n.el.classList.remove('hovered');
+          edgeEls.forEach(function(ee) { ee.el.classList.remove('active'); });
+          hideTooltip();
+        });
+        if (n.type === 'leaf') {
+          n.el.addEventListener('click', function(e) {
+            if (!n._dragged) window.location.href = 'research.html';
+          });
+        }
+      });
+
+      // Simple force simulation
+      var damping = 0.85;
+      var running = true;
+      var springLen = { center: 180, branch: 120 };
+      var springK = 0.008;
+      var repulsion = 8000;
+      var centerGravity = 0.0005;
+
+      function tick() {
+        // Repulsion between all nodes
+        for (var i = 0; i < nodes.length; i++) {
+          for (var j = i + 1; j < nodes.length; j++) {
+            var a = nodes[i], b = nodes[j];
+            var dx = b.x - a.x, dy = b.y - a.y;
+            var dist = Math.sqrt(dx*dx + dy*dy) || 1;
+            var minDist = a.r + b.r + 10;
+            if (dist < minDist * 3) {
+              var force = repulsion / (dist * dist);
+              var fx = (dx / dist) * force, fy = (dy / dist) * force;
+              if (!a.fixed) { a.vx -= fx; a.vy -= fy; }
+              if (!b.fixed) { b.vx += fx; b.vy += fy; }
+            }
+          }
+        }
+
+        // Spring forces along edges
+        edgeEls.forEach(function(ee) {
+          var s = nodeMap[ee.src], t = nodeMap[ee.tgt];
+          var dx = t.x - s.x, dy = t.y - s.y;
+          var dist = Math.sqrt(dx*dx + dy*dy) || 1;
+          var ideal = s.type === 'center' ? springLen.center : springLen.branch;
+          var force = (dist - ideal) * springK;
+          var fx = (dx / dist) * force, fy = (dy / dist) * force;
+          if (!s.fixed) { s.vx += fx; s.vy += fy; }
+          if (!t.fixed) { t.vx -= fx; t.vy -= fy; }
+        });
+
+        // Center gravity
+        nodes.forEach(function(n) {
+          if (n.fixed) return;
+          n.vx += (W / 2 - n.x) * centerGravity;
+          n.vy += (H / 2 - n.y) * centerGravity;
+        });
+
+        // Integrate
+        var totalV = 0;
+        nodes.forEach(function(n) {
+          if (n.fixed || n._dragging) return;
+          n.vx *= damping;
+          n.vy *= damping;
+          n.x += n.vx;
+          n.y += n.vy;
+          // Bounds
+          n.x = Math.max(n.r + 5, Math.min(W - n.r - 5, n.x));
+          n.y = Math.max(n.r + 5, Math.min(H - n.r - 5, n.y));
+          totalV += Math.abs(n.vx) + Math.abs(n.vy);
+        });
+
+        // Update positions
+        nodes.forEach(function(n) {
+          n.el.setAttribute('transform', 'translate(' + n.x.toFixed(1) + ',' + n.y.toFixed(1) + ')');
+        });
+        edgeEls.forEach(updateEdge);
+
+        if (running) requestAnimationFrame(tick);
+      }
+
+      // Run simulation for initial layout, then slow down
+      requestAnimationFrame(tick);
+      setTimeout(function() { damping = 0.5; }, 2000);
+      setTimeout(function() { damping = 0.1; }, 4000);
+
+      // Drag handling
+      var dragNode = null, dragOffset = { x: 0, y: 0 };
+
+      function getSVGPoint(e) {
+        var rect = svg.getBoundingClientRect();
+        var touch = e.touches ? e.touches[0] : e;
+        return {
+          x: (touch.clientX - rect.left) / rect.width * W,
+          y: (touch.clientY - rect.top) / rect.height * H
+        };
+      }
+
+      function onStart(e) {
+        var target = e.target.closest('.rg-node-group');
+        if (!target) return;
+        var id = target.getAttribute('data-id');
+        var n = nodeMap[id];
+        if (!n || n.type === 'center') return;
+        e.preventDefault();
+        var pt = getSVGPoint(e);
+        dragNode = n;
+        dragNode._dragging = true;
+        dragNode._dragged = false;
+        dragOffset.x = n.x - pt.x;
+        dragOffset.y = n.y - pt.y;
+        target.style.cursor = 'grabbing';
+        damping = 0.85;
+        running = true;
+        requestAnimationFrame(tick);
+      }
+
+      function onMove(e) {
+        if (!dragNode) return;
+        e.preventDefault();
+        var pt = getSVGPoint(e);
+        dragNode.x = Math.max(dragNode.r, Math.min(W - dragNode.r, pt.x + dragOffset.x));
+        dragNode.y = Math.max(dragNode.r, Math.min(H - dragNode.r, pt.y + dragOffset.y));
+        dragNode.vx = 0; dragNode.vy = 0;
+        dragNode._dragged = true;
+      }
+
+      function onEnd() {
+        if (!dragNode) return;
+        dragNode.el.style.cursor = 'grab';
+        dragNode._dragging = false;
+        dragNode = null;
+        setTimeout(function() { damping = 0.3; }, 500);
+        setTimeout(function() { damping = 0.1; }, 2000);
+      }
+
+      svg.addEventListener('mousedown', onStart);
+      svg.addEventListener('touchstart', onStart, { passive: false });
+      window.addEventListener('mousemove', onMove);
+      window.addEventListener('touchmove', onMove, { passive: false });
+      window.addEventListener('mouseup', onEnd);
+      window.addEventListener('touchend', onEnd);
+    });
+  </script>
+</body>
+</html>

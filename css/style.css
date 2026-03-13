@@ -111,6 +111,9 @@ body {
 img {
   max-width: 100%;
   display: block;
+  -webkit-user-drag: none;
+  user-select: none;
+  pointer-events: none;
 }
 
 a {

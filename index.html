@@ -18,9 +18,9 @@
        ============================================================ -->
   <nav class="site-nav">
     <div class="nav-inner">
-      <a href="index.html" class="nav-brand">Yong Chae Kim</a>
+      <a href="/" class="nav-brand">Yong Chae Kim</a>
       <div class="nav-links">
-        <a href="index.html"    data-page="index">Home</a>
+        <a href="/"    data-page="index">Home</a>
         <a href="cv.html"       data-page="cv">CV</a>
         <a href="research.html" data-page="research">Research</a>
         <a href="awards.html"   data-page="awards">Awards</a>
@@ -35,7 +35,7 @@
 
   <!-- Mobile menu drawer -->
   <div class="mobile-menu" id="mobileMenu">
-    <a href="index.html"    data-page="index">Home</a>
+    <a href="/"    data-page="index">Home</a>
     <a href="cv.html"       data-page="cv">CV</a>
     <a href="research.html" data-page="research">Research</a>
     <a href="awards.html"   data-page="awards">Awards</a>
@@ -303,7 +303,7 @@
         { id: 'batt', label: 'Battery MAC', sub: 'J9 · 2025', x: 300, y: 490, r: 26, type: 'leaf', branch: 'prog', desc: 'Partial charge matrix framework for battery maximum available capacity' },
         // Industrial Applications
         { id: 'app', label: 'Industrial', sub: 'Applications', x: 640, y: 420, r: 34, type: 'branch', branch: 'app' },
-        { id: 'mfm', label: 'Mfg. FM', sub: 'Project', x: 560, y: 490, r: 26, type: 'leaf', branch: 'app', desc: 'Large-scale multimodal foundation model for manufacturing data' },
+        { id: 'mfm', label: 'MFM', sub: 'Project', x: 560, y: 490, r: 26, type: 'leaf', branch: 'app', desc: 'Large-scale multimodal foundation model for manufacturing data' },
         { id: 'pbv', label: 'PBV Road', sub: 'Project', x: 700, y: 490, r: 26, type: 'leaf', branch: 'app', desc: 'Deep learning for road diagnostics: anomaly detection & pothole identification' },
         { id: 'air', label: 'Aircraft PHM', sub: 'Project', x: 810, y: 460, r: 26, type: 'leaf', branch: 'app', desc: 'Flight data recorder analysis with autoencoder for engine anomaly detection' }
       ];
@@ -445,13 +445,15 @@
         }
       });
 
-      // Simple force simulation
+      // Force simulation with auto-stop
       var damping = 0.85;
       var running = true;
+      var animId = null;
       var springLen = { center: 180, branch: 120 };
       var springK = 0.008;
       var repulsion = 8000;
       var centerGravity = 0.0005;
+      var stableFrames = 0;
 
       function tick() {
         // Repulsion between all nodes
@@ -497,7 +499,6 @@
           n.vy *= damping;
           n.x += n.vx;
           n.y += n.vy;
-          // Bounds
           n.x = Math.max(n.r + 5, Math.min(W - n.r - 5, n.x));
           n.y = Math.max(n.r + 5, Math.min(H - n.r - 5, n.y));
           totalV += Math.abs(n.vx) + Math.abs(n.vy);
@@ -509,13 +510,21 @@
         });
         edgeEls.forEach(updateEdge);
 
-        if (running) requestAnimationFrame(tick);
+        // Auto-stop when stable
+        if (totalV < 0.5) {
+          stableFrames++;
+          if (stableFrames > 30) { running = false; }
+        } else {
+          stableFrames = 0;
+        }
+
+        if (running) animId = requestAnimationFrame(tick);
       }
 
-      // Run simulation for initial layout, then slow down
-      requestAnimationFrame(tick);
-      setTimeout(function() { damping = 0.5; }, 2000);
-      setTimeout(function() { damping = 0.1; }, 4000);
+      // Run simulation
+      animId = requestAnimationFrame(tick);
+      setTimeout(function() { damping = 0.5; }, 1500);
+      setTimeout(function() { damping = 0.15; }, 3000);
 
       // Drag handling
       var dragNode = null, dragOffset = { x: 0, y: 0 };
@@ -544,8 +553,8 @@
         dragOffset.y = n.y - pt.y;
         target.style.cursor = 'grabbing';
         damping = 0.85;
-        running = true;
-        requestAnimationFrame(tick);
+        stableFrames = 0;
+        if (!running) { running = true; animId = requestAnimationFrame(tick); }
       }
 
       function onMove(e) {

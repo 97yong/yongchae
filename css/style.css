@@ -384,6 +384,37 @@ code {
   background: var(--color-bg-inset);
 }
 
+/* Mobile theme toggle inside menu — hidden on desktop */
+.mobile-theme-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-theme-toggle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: var(--color-text-muted);
+    padding: 10px 14px;
+    border-radius: var(--radius-md);
+    background: none;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 4px;
+    border-top: 1px solid var(--color-border);
+    padding-top: 14px;
+    transition: color var(--transition), background var(--transition);
+  }
+
+  .mobile-theme-toggle:hover {
+    color: var(--color-text);
+    background: var(--color-bg-inset);
+  }
+}
+
 
 /* ============================================================
    5. HERO / HOME PAGE
@@ -1437,53 +1468,60 @@ code {
 /* Graph edges */
 .rg-edge {
   stroke: var(--color-border);
-  stroke-width: 1.5;
+  stroke-width: 1.8;
   fill: none;
-  opacity: 0.5;
-  transition: stroke 0.3s, stroke-width 0.3s, opacity 0.3s;
+  opacity: 0.35;
+  stroke-dasharray: 6 3;
+  transition: stroke 0.3s, stroke-width 0.3s, opacity 0.3s, stroke-dasharray 0.3s;
 }
 
 .rg-edge.active {
   stroke-width: 2.5;
-  opacity: 1;
+  opacity: 0.85;
+  stroke-dasharray: none;
 }
 
 /* Graph circle nodes */
 .rg-circle {
-  transition: filter 0.3s, stroke-width 0.3s;
+  transition: filter 0.3s, stroke-width 0.3s, transform 0.2s;
 }
 
 .rg-circle-center {
-  filter: drop-shadow(0 2px 10px rgba(79,70,229,0.35));
+  filter: drop-shadow(0 3px 14px rgba(79,70,229,0.4));
 }
 
 .rg-circle-branch {
-  opacity: 0.9;
-  filter: drop-shadow(0 1px 6px rgba(0,0,0,0.12));
+  opacity: 0.92;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
 }
 
 .rg-circle-leaf {
-  filter: drop-shadow(0 1px 4px rgba(0,0,0,0.08));
+  filter: drop-shadow(0 1px 5px rgba(0,0,0,0.1));
+  transition: filter 0.3s, stroke-width 0.3s, fill 0.3s;
 }
 
 /* Pulse animation for center */
 .rg-pulse {
-  animation: rgPulse 3s ease-in-out infinite;
+  animation: rgPulse 3.5s ease-in-out infinite;
 }
 
 @keyframes rgPulse {
-  0%, 100% { r: 42; opacity: 0.4; }
-  50% { r: 52; opacity: 0; }
+  0%, 100% { r: 42; opacity: 0.35; }
+  50% { r: 56; opacity: 0; }
 }
 
 /* Node group hover */
+.rg-node-group {
+  transition: opacity 0.2s;
+}
+
 .rg-node-group.hovered .rg-circle-leaf {
   stroke-width: 3;
-  filter: drop-shadow(0 2px 10px rgba(0,0,0,0.18));
+  filter: drop-shadow(0 3px 12px rgba(0,0,0,0.22));
 }
 
 .rg-node-group.hovered .rg-circle-branch {
-  filter: drop-shadow(0 3px 12px rgba(0,0,0,0.2));
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.25));
   opacity: 1;
 }
 
@@ -1496,9 +1534,10 @@ code {
   pointer-events: none;
   fill: var(--color-text);
   transition: fill 0.3s;
+  letter-spacing: 0.01em;
 }
 
-.rg-label-center { fill: #fff; font-size: 13px; font-weight: 800; }
+.rg-label-center { fill: #fff; font-size: 14px; font-weight: 800; letter-spacing: 0.02em; }
 .rg-label-branch { fill: #fff; font-size: 11px; font-weight: 700; }
 
 .rg-sublabel {
@@ -1518,23 +1557,24 @@ code {
   position: absolute;
   background: var(--color-bg-card, var(--color-bg));
   border: 1px solid var(--color-border);
-  border-radius: 10px;
-  padding: 12px 16px;
+  border-radius: 12px;
+  padding: 14px 18px;
   font-size: 0.8125rem;
-  line-height: 1.5;
+  line-height: 1.55;
   color: var(--color-text);
   max-width: 260px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.14);
   pointer-events: none;
   opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.25s, transform 0.25s;
+  transform: translateY(8px) scale(0.96);
+  transition: opacity 0.2s ease, transform 0.2s ease;
   z-index: 10;
+  backdrop-filter: blur(8px);
 }
 
 .rg-tooltip.visible {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0) scale(1);
 }
 
 .rg-tooltip-title {
@@ -1935,47 +1975,16 @@ code {
     display: none;
   }
 
-  /* Hide theme toggle from nav bar on mobile — it's in the mobile menu */
-  .nav-inner > .theme-toggle {
+  .nav-links {
     display: none;
+  }
+
+  .theme-toggle {
+    margin-left: auto;
   }
 
   .hamburger {
     display: flex;
-    margin-left: auto;
-  }
-
-  /* Theme toggle inside mobile menu */
-  .mobile-menu .mobile-theme-toggle {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 0.9375rem;
-    font-weight: 500;
-    color: var(--color-text-muted);
-    padding: 10px 14px;
-    border-radius: var(--radius-md);
-    background: none;
-    border: none;
-    width: 100%;
-    cursor: pointer;
-    transition: color var(--transition), background var(--transition);
-  }
-
-  .mobile-menu .mobile-theme-toggle:hover {
-    color: var(--color-text);
-    background: var(--color-bg-inset);
-  }
-
-  /* CV/Awards pages: ensure left padding on mobile */
-  .container {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  .page-header .container {
-    padding-left: 16px;
-    padding-right: 16px;
   }
 
   /* Hero: stack vertically, photo on top */
@@ -2046,19 +2055,15 @@ code {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Stats row: compact grid on mobile */
+  /* Stats row on mobile: keep flex with dividers */
   .stats-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px 8px;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .stat-divider {
-    display: none;
-  }
-
-  .stat-item {
-    text-align: center;
+    height: 28px;
   }
 
   /* Contact links: 2-column on tablet */

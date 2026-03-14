@@ -2454,5 +2454,130 @@ code {
 
 
 /* ============================================================
+   Citation Chart
+   ============================================================ */
+.citation-section {
+  padding-bottom: 16px;
+}
+
+.citation-chart-wrap {
+  background: var(--color-bg-card, var(--color-bg));
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: border-color var(--transition-slow), background var(--transition-slow);
+}
+
+.citation-stats {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  margin-bottom: 32px;
+}
+
+.citation-stat {
+  text-align: center;
+}
+
+.citation-stat-num {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-accent);
+  line-height: 1.2;
+}
+
+.citation-stat-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-text-subtle);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.citation-chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 6px;
+  height: 180px;
+  padding: 0 8px;
+}
+
+.citation-bar-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  max-width: 60px;
+}
+
+.citation-bar-count {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--color-text-subtle);
+  margin-bottom: 4px;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.citation-bar-group:hover .citation-bar-count {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.citation-bar {
+  width: 100%;
+  background: var(--color-accent);
+  border-radius: 4px 4px 0 0;
+  min-height: 4px;
+  transform-origin: bottom;
+  transform: scaleY(0);
+  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s;
+}
+
+.citation-bar-group:hover .citation-bar {
+  background: var(--color-accent-hover, var(--color-accent));
+  filter: brightness(1.15);
+}
+
+.citation-bar.animate {
+  transform: scaleY(1);
+}
+
+.citation-bar-year {
+  font-size: 0.6875rem;
+  font-weight: 600;
+  color: var(--color-text-subtle);
+  margin-top: 8px;
+}
+
+.citation-source {
+  text-align: right;
+  font-size: 0.6875rem;
+  color: var(--color-text-subtle);
+  margin-top: 16px;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .citation-stats {
+    gap: 24px;
+  }
+  .citation-stat-num {
+    font-size: 1.5rem;
+  }
+  .citation-chart {
+    height: 140px;
+    gap: 4px;
+  }
+  .citation-chart-wrap {
+    padding: 20px;
+  }
+}
+
+/* ============================================================
    END OF style.css
    ============================================================ */

@@ -128,7 +128,6 @@
     </div><!-- /hero-inner -->
   </section>
 
-
   <!-- ============================================================
        RESEARCH STRUCTURE GRAPH
        ============================================================ -->
@@ -166,7 +165,7 @@
             </div>
             <div class="pub-content">
               <div class="pub-title">
-                Physics-guided deep ensemble learning for remaining useful life prediction
+                Physics-guided deep ensemble learning for the remaining useful life prediction of machine tools using kernel density estimation
               </div>
               <div class="pub-authors"><strong class="self">Kim, Y.C.</strong>, Kim, B., Kim, M., Lee, S.K., Jung, J.H., &amp; Youn, B.D.</div>
               <div class="pub-meta">
@@ -184,7 +183,7 @@
             </div>
             <div class="pub-content">
               <div class="pub-title">
-                Latent Space Alignment based Domain Adaptation (LSADA)
+                Latent Space Alignment based Domain Adaptation (LSADA) for Fault Diagnosis of Rotating Machinery
               </div>
               <div class="pub-authors"><strong class="self">Kim, Y.C.</strong>, Ko, J.U., Lee, J., Kim, T., Jung, J.H., &amp; Youn, B.D.</div>
               <div class="pub-meta">
@@ -202,7 +201,7 @@
             </div>
             <div class="pub-content">
               <div class="pub-title">
-                Gradient Alignment based Partial Domain Adaptation (GAPDA)
+                Gradient Alignment based Partial Domain Adaptation (GAPDA) for fault diagnosis of bearing
               </div>
               <div class="pub-authors"><strong class="self">Kim, Y.C.</strong>, Lee, J., Kim, T., Baek, J., Ko, J.U., Jung, J.H., &amp; Youn, B.D.</div>
               <div class="pub-meta">
@@ -220,6 +219,34 @@
         </div>
       </section>
 
+      <!-- ============================================================
+           CITATION TREND CHART
+           ============================================================ -->
+      <section class="citation-section" style="margin-bottom: 56px;">
+        <div class="section-header">
+          <h2 class="section-title fade-in">인용 추이</h2>
+        </div>
+        <div class="citation-chart-wrap fade-in" data-delay="1">
+          <div class="citation-stats">
+            <div class="citation-stat">
+              <span class="citation-stat-num" id="citTotal">—</span>
+              <span class="citation-stat-label">총 인용수</span>
+            </div>
+            <div class="citation-stat">
+              <span class="citation-stat-num" id="citHIndex">—</span>
+              <span class="citation-stat-label">h-index</span>
+            </div>
+            <div class="citation-stat">
+              <span class="citation-stat-num" id="citI10">—</span>
+              <span class="citation-stat-label">i10-index</span>
+            </div>
+          </div>
+          <div class="citation-chart" id="citationChart">
+            <!-- Rendered by JS -->
+          </div>
+          <p class="citation-source">Google Scholar 출처</p>
+        </div>
+      </section>
 
     </div><!-- /page-container -->
   </main>
@@ -265,6 +292,78 @@
         document.getElementById('statDomConf').textContent = domCount;
         document.getElementById('statAwards').textContent = aCount;
         document.getElementById('statPatents').textContent = pCount;
+      } catch(e) {}
+
+      // Citation trend chart
+      try {
+        const cit = await loadJSON('../data/citations.json');
+
+        function animateCount(el, target) {
+          var duration = 1200;
+          var startTime = null;
+          function step(ts) {
+            if (!startTime) startTime = ts;
+            var progress = Math.min((ts - startTime) / duration, 1);
+            var ease = 1 - Math.pow(1 - progress, 3);
+            el.textContent = Math.round(target * ease);
+            if (progress < 1) requestAnimationFrame(step);
+          }
+          requestAnimationFrame(step);
+        }
+
+        const elTotal  = document.getElementById('citTotal');
+        const elHIndex = document.getElementById('citHIndex');
+        const elI10    = document.getElementById('citI10');
+        if (elTotal)  animateCount(elTotal,  cit.totalCitations || 0);
+        if (elHIndex) animateCount(elHIndex, cit.hIndex || 0);
+        if (elI10)    animateCount(elI10,    cit.i10Index || 0);
+
+        const chart = document.getElementById('citationChart');
+        const years = Object.keys(cit.citesPerYear || {}).sort();
+        if (chart && years.length > 0) {
+          const counts = years.map(y => cit.citesPerYear[y]);
+          const maxCount = Math.max(...counts, 1);
+          const chartHeight = chart.clientHeight || 180;
+
+          years.forEach(function(year, i) {
+            const count = counts[i];
+            const heightPct = Math.max(count / maxCount, count > 0 ? 0.02 : 0);
+
+            const group = document.createElement('div');
+            group.className = 'citation-bar-group';
+
+            const countEl = document.createElement('div');
+            countEl.className = 'citation-bar-count';
+            countEl.textContent = count;
+
+            const bar = document.createElement('div');
+            bar.className = 'citation-bar';
+            bar.style.height = (heightPct * (chartHeight - 32)) + 'px';
+            bar.style.transitionDelay = (i * 0.1) + 's';
+
+            const yearEl = document.createElement('div');
+            yearEl.className = 'citation-bar-year';
+            yearEl.textContent = year;
+
+            group.appendChild(countEl);
+            group.appendChild(bar);
+            group.appendChild(yearEl);
+            chart.appendChild(group);
+          });
+
+          // Animate bars when scrolled into view
+          const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+              if (entry.isIntersecting) {
+                chart.querySelectorAll('.citation-bar').forEach(function(b) {
+                  b.classList.add('animate');
+                });
+                observer.disconnect();
+              }
+            });
+          }, { threshold: 0.2 });
+          observer.observe(chart);
+        }
       } catch(e) {}
     });
   </script>

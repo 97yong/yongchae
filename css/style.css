@@ -1648,7 +1648,7 @@ code {
 .rg-label {
   font-family: 'DM Sans', sans-serif;
   font-size: 10.5px;
-  font-weight: 600;
+  font-weight: 800;
   text-anchor: middle;
   pointer-events: none;
   fill: var(--color-text);
@@ -1662,14 +1662,15 @@ code {
 .rg-sublabel {
   font-family: 'DM Sans', sans-serif;
   font-size: 8.5px;
+  font-weight: 800;
   text-anchor: middle;
   pointer-events: none;
   fill: var(--color-text-secondary);
   transition: fill 0.3s;
 }
 
-.rg-sublabel-center { fill: rgba(255,255,255,0.8); font-size: 10.5px; }
-.rg-sublabel-branch { fill: rgba(255,255,255,0.75); font-size: 9px; }
+.rg-sublabel-center { fill: rgba(255,255,255,0.8); font-size: 10.5px; font-weight: 800; }
+.rg-sublabel-branch { fill: rgba(255,255,255,0.75); font-size: 9px; font-weight: 800; }
 
 /* Tooltip */
 .rg-tooltip {
@@ -2184,17 +2185,13 @@ code {
 
   /* Stats row on mobile: keep flex with dividers */
   .stats-row {
-    gap: 16px 20px;
+    gap: 16px 24px;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   .stat-divider {
     height: 28px;
-  }
-
-  .stat-divider:nth-child(6) {
-    display: none;
   }
 
   /* Contact links: 2-column on tablet */
@@ -2256,8 +2253,7 @@ code {
   }
 
   .stats-row {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px 6px;
+    gap: 12px 18px;
   }
 
   .stat-num {
@@ -2266,6 +2262,10 @@ code {
 
   .stat-label {
     font-size: 0.625rem;
+  }
+
+  .stat-divider {
+    height: 24px;
   }
 
   .research-card-image {
@@ -2734,7 +2734,7 @@ code {
     padding-left: 32px;
   }
   .citation-grid-lines {
-    bottom: 26px;
+    bottom: 30px;
   }
   .citation-grid-line {
     left: 32px;

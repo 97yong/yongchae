@@ -425,23 +425,23 @@
 
       // All nodes: { id, label, sub, x, y, r, type, branch, desc, fixed }
       var nodes = [
-        { id: 'center', label: 'PHM을 위한', sub: '딥러닝', x: 450, y: 260, r: 42, type: 'center', branch: 'center', fixed: true },
+        { id: 'center', label: '산업 인공지능', x: 450, y: 260, r: 42, type: 'center', branch: 'center', fixed: true },
         // Domain Adaptation
-        { id: 'da', label: '도메인', sub: '적응', x: 200, y: 140, r: 34, type: 'branch', branch: 'da' },
+        { id: 'da', label: '도메인 적응', x: 200, y: 140, r: 34, type: 'branch', branch: 'da' },
         { id: 'lsada', label: 'LSADA', sub: 'J7 · 2024', x: 70, y: 60, r: 26, type: 'leaf', branch: 'da', desc: 'Latent Space Alignment Domain Adaptation for unsupervised fault diagnosis' },
         { id: 'gapda', label: 'GAPDA', sub: 'J5 · 2024', x: 80, y: 230, r: 26, type: 'leaf', branch: 'da', desc: 'Gradient Alignment Partial Domain Adaptation with domain knowledge filter' },
         { id: 'dalas', label: 'DALAS', sub: 'J4 · 2023', x: 200, y: 30, r: 26, type: 'leaf', branch: 'da', desc: 'Label-aligned sampling for imbalanced cross-domain fault diagnosis' },
         // Signal Generation
-        { id: 'sg', label: '신호', sub: '생성', x: 700, y: 140, r: 34, type: 'branch', branch: 'sg' },
+        { id: 'sg', label: '신호 생성', x: 700, y: 140, r: 34, type: 'branch', branch: 'sg' },
         { id: 'flgn', label: 'FLGN', sub: 'J3 · 2023', x: 700, y: 30, r: 26, type: 'leaf', branch: 'sg', desc: 'Frequency-learning generative network for variable-length vibration signals' },
         { id: 'gan', label: 'Spectrum-GAN', sub: 'J6 · 2024', x: 830, y: 60, r: 26, type: 'leaf', branch: 'sg', desc: 'Spectral loss & density-directionality sampling for fault signal generation' },
         { id: 'ardiff', label: 'ARDiff', sub: 'J10 · 2026', x: 830, y: 220, r: 26, type: 'leaf', branch: 'sg', desc: 'Adaptive reverse-step diffusion for unsupervised vibration denoising' },
         // Prognostics
-        { id: 'prog', label: '예지 및', sub: '잔여수명', x: 260, y: 420, r: 34, type: 'branch', branch: 'prog' },
+        { id: 'prog', label: '예지 및 잔여수명', x: 260, y: 420, r: 34, type: 'branch', branch: 'prog' },
         { id: 'kde', label: 'KDE Ensemble', sub: 'J11 · 2026', x: 120, y: 470, r: 26, type: 'leaf', branch: 'prog', desc: 'Physics-guided transformer ensemble with KDE for tool remaining useful life' },
         { id: 'batt', label: 'Battery MAC', sub: 'J9 · 2025', x: 300, y: 490, r: 26, type: 'leaf', branch: 'prog', desc: 'Partial charge matrix framework for battery maximum available capacity' },
         // Industrial Applications
-        { id: 'app', label: '산업', sub: '응용', x: 640, y: 420, r: 34, type: 'branch', branch: 'app' },
+        { id: 'app', label: '산업 응용', x: 640, y: 420, r: 34, type: 'branch', branch: 'app' },
         { id: 'mfm', label: 'MFM', sub: 'Project', x: 560, y: 490, r: 26, type: 'leaf', branch: 'app', desc: 'Large-scale multimodal foundation model for manufacturing data' },
         { id: 'pbv', label: 'PBV Road', sub: 'Project', x: 700, y: 490, r: 26, type: 'leaf', branch: 'app', desc: 'Deep learning for road diagnostics: anomaly detection & pothole identification' },
         { id: 'air', label: 'Aircraft PHM', sub: 'Project', x: 810, y: 460, r: 26, type: 'leaf', branch: 'app', desc: 'Flight data recorder analysis with autoencoder for engine anomaly detection' }
@@ -523,16 +523,30 @@
           g.insertBefore(pulse, c);
         }
 
-        // Label
-        var label = el('text', { x: 0, y: n.sub ? -4 : 2, class: 'rg-label rg-label-' + n.type });
-        label.textContent = n.label;
-        g.appendChild(label);
+        // Label — auto-wrap long text for center/branch nodes
+        var maxChars = n.type === 'center' ? 12 : n.type === 'branch' ? 14 : 20;
+        var words = n.label.split(' ');
+        var lines = [];
+        var cur = '';
+        words.forEach(function(w) {
+          if (cur && (cur + ' ' + w).length > maxChars) { lines.push(cur); cur = w; }
+          else { cur = cur ? cur + ' ' + w : w; }
+        });
+        if (cur) lines.push(cur);
 
-        if (n.sub) {
-          var sub = el('text', { x: 0, y: 10, class: 'rg-sublabel rg-sublabel-' + n.type });
-          sub.textContent = n.sub;
-          g.appendChild(sub);
-        }
+        if (n.sub) lines.push(n.sub);
+
+        var totalLines = lines.length;
+        var lineH = n.type === 'center' ? 16 : n.type === 'branch' ? 14 : 12;
+        var startY = -(totalLines - 1) * lineH / 2 + 1;
+
+        lines.forEach(function(line, li) {
+          var isSub = n.sub && li === totalLines - 1;
+          var cls = isSub ? 'rg-sublabel rg-sublabel-' + n.type : 'rg-label rg-label-' + n.type;
+          var t = el('text', { x: 0, y: startY + li * lineH, class: cls });
+          t.textContent = line;
+          g.appendChild(t);
+        });
 
         g.setAttribute('transform', 'translate(' + n.x + ',' + n.y + ')');
         nodeLayer.appendChild(g);

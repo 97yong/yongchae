@@ -813,9 +813,9 @@ code {
 
 .pub-item {
   display: grid;
-  grid-template-columns: 44px 1fr;
-  gap: 16px;
-  padding: 22px 0;
+  grid-template-columns: 38px 1fr;
+  gap: 12px;
+  padding: 14px 0;
   border-bottom: 1px solid var(--color-border);
   transition: border-color var(--transition-slow), background var(--transition);
 }
@@ -860,11 +860,11 @@ code {
 
 .pub-title {
   font-family: var(--font-sans);
-  font-size: 1.0625rem;
+  font-size: 0.9375rem;
   font-weight: 700;
   color: var(--color-text);
   line-height: 1.45;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   transition: color var(--transition);
 }
 
@@ -879,10 +879,10 @@ code {
 }
 
 .pub-authors {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--color-text-subtle);
-  line-height: 1.5;
-  margin-bottom: 8px;
+  line-height: 1.45;
+  margin-bottom: 4px;
   transition: color var(--transition-slow);
 }
 
@@ -895,12 +895,12 @@ code {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
-  margin-top: 6px;
+  gap: 6px;
+  margin-top: 4px;
 }
 
 .pub-venue {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-style: italic;
   color: var(--color-text-muted);
   transition: color var(--transition-slow);
@@ -2049,6 +2049,10 @@ code {
 
   .lang-toggle {
     margin-left: auto;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border-radius: var(--radius-md);
   }
 
   .hamburger {

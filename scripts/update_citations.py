@@ -1,42 +1,82 @@
 #!/usr/bin/env python3
 """
 Fetch Google Scholar citation data and save to data/citations.json.
-Runs in GitHub Actions environment with proxy fallback.
+Uses SerpAPI (free tier: 100 searches/month) for reliable access.
+Set SERPAPI_KEY as a GitHub Actions secret.
 """
 
 import json
 import os
+import sys
 from datetime import date
+from urllib.request import urlopen, Request
+from urllib.parse import urlencode
 
 SCHOLAR_ID = "qex9tLkAAAAJ"
 OUTPUT_PATH = os.path.join(os.path.dirname(__file__), "..", "data", "citations.json")
 
 
-def fetch_author_data():
+def fetch_via_serpapi(api_key):
+    """Fetch author data via SerpAPI (reliable, free tier available)."""
+    params = urlencode({
+        "engine": "google_scholar_author",
+        "author_id": SCHOLAR_ID,
+        "api_key": api_key,
+    })
+    url = f"https://serpapi.com/search.json?{params}"
+    req = Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    with urlopen(req, timeout=30) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+
+    cited_by = data.get("cited_by", {})
+    table = cited_by.get("table", [])
+    graph = cited_by.get("graph", [])
+
+    total = 0
+    h_index = 0
+    i10_index = 0
+    for row in table:
+        if "citations" in row:
+            total = row["citations"].get("all", 0)
+        if "h_index" in row:
+            h_index = row["h_index"].get("all", 0)
+        if "i10_index" in row:
+            i10_index = row["i10_index"].get("all", 0)
+
+    cites_per_year = {}
+    for entry in graph:
+        year = str(entry.get("year", ""))
+        citations = entry.get("citations", 0)
+        if year:
+            cites_per_year[year] = citations
+
+    return {
+        "lastUpdated": date.today().isoformat(),
+        "totalCitations": total,
+        "hIndex": h_index,
+        "i10Index": i10_index,
+        "citesPerYear": cites_per_year,
+    }
+
+
+def fetch_via_scholarly():
+    """Fallback: use scholarly library (may fail in CI due to bot detection)."""
     from scholarly import scholarly, ProxyGenerator
 
-    # Try FreeProxy first (needed in GitHub Actions to avoid bot detection)
     try:
         pg = ProxyGenerator()
         success = pg.FreeProxies()
         if success:
             scholarly.use_proxy(pg)
             print("Using FreeProxy")
-        else:
-            print("FreeProxy setup returned False, proceeding without proxy")
     except Exception as e:
-        print(f"Proxy setup failed: {e}. Proceeding without proxy.")
+        print(f"Proxy setup failed: {e}")
 
     print(f"Fetching author profile for ID: {SCHOLAR_ID}")
     author = scholarly.search_author_id(SCHOLAR_ID)
     author = scholarly.fill(author, sections=["basics", "indices", "counts"])
-    return author
 
-
-def extract_data(author):
-    cites_per_year = author.get("cites_per_year", {})
-    # Ensure keys are strings
-    cites_per_year = {str(k): v for k, v in cites_per_year.items()}
+    cites_per_year = {str(k): v for k, v in author.get("cites_per_year", {}).items()}
 
     return {
         "lastUpdated": date.today().isoformat(),
@@ -48,12 +88,25 @@ def extract_data(author):
 
 
 def main():
-    try:
-        author = fetch_author_data()
-        data = extract_data(author)
-    except Exception as e:
-        print(f"ERROR fetching data: {e}")
-        raise
+    api_key = os.environ.get("SERPAPI_KEY", "")
+
+    data = None
+    if api_key:
+        print("Using SerpAPI...")
+        try:
+            data = fetch_via_serpapi(api_key)
+        except Exception as e:
+            print(f"SerpAPI failed: {e}")
+    else:
+        print("No SERPAPI_KEY found, trying scholarly...")
+        try:
+            data = fetch_via_scholarly()
+        except Exception as e:
+            print(f"Scholarly failed: {e}")
+
+    if data is None:
+        print("ERROR: All methods failed to fetch citation data.")
+        sys.exit(1)
 
     out_path = os.path.normpath(OUTPUT_PATH)
     os.makedirs(os.path.dirname(out_path), exist_ok=True)

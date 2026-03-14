@@ -578,7 +578,7 @@ code {
 .stats-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px;
+  gap: 32px;
   align-items: center;
   padding-top: 24px;
   border-top: 2px solid var(--color-border);
@@ -1406,16 +1406,16 @@ code {
   transition: background var(--transition-slow);
 }
 
-.award-accent.gold   { background: #d97706; }
-.award-accent.silver { background: #94a3b8; }
-.award-accent.bronze { background: #b45309; }
-.award-accent.blue   { background: var(--color-accent); }
+.award-accent.gold,
+.award-accent.silver,
+.award-accent.bronze,
+.award-accent.blue   { background: #94a3b8; }
 
 /* Award card accent colors based on data-rank */
-.award-card[data-rank="1st"] .award-card-accent { background: #d97706; }
-.award-card[data-rank="2nd"] .award-card-accent { background: #94a3b8; }
-.award-card[data-rank="top"] .award-card-accent { background: var(--color-accent); }
-.award-card[data-rank="other"] .award-card-accent { background: var(--color-border-strong); }
+.award-card[data-rank="1st"] .award-card-accent,
+.award-card[data-rank="2nd"] .award-card-accent,
+.award-card[data-rank="top"] .award-card-accent,
+.award-card[data-rank="other"] .award-card-accent { background: #94a3b8; }
 
 .award-body,
 .award-card-body {
@@ -1449,12 +1449,12 @@ code {
   transition: color var(--transition-slow);
 }
 
-/* Scholarship item */
+/* Scholarship item — award-card style */
 .scholarship-item {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
-  padding: 14px 0;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 0;
   border-bottom: 1px solid var(--color-border);
   transition: border-color var(--transition-slow);
 }
@@ -1463,26 +1463,54 @@ code {
   border-bottom: none;
 }
 
-.scholarship-title {
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: var(--color-text);
+.scholarship-accent {
+  width: 4px;
+  height: 36px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  background: #94a3b8;
+  transition: background var(--transition-slow);
+}
+
+[data-theme="dark"] .scholarship-accent {
+  background: #64748b;
+}
+
+.scholarship-body {
   flex: 1;
+  min-width: 0;
+}
+
+.scholarship-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 3px;
+  line-height: 1.4;
   transition: color var(--transition-slow);
 }
 
-.scholarship-desc {
+.scholarship-event {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 3px;
+  transition: color var(--transition-slow);
+}
+
+.scholarship-meta {
   font-size: 0.8125rem;
-  color: var(--color-text-subtle);
+  font-weight: 600;
+  color: var(--color-text-faint);
   transition: color var(--transition-slow);
 }
 
-/* Honor item */
+/* Honor item — award-card style */
 .honor-item {
   display: flex;
-  align-items: baseline;
-  gap: 12px;
-  padding: 14px 0;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 18px 0;
   border-bottom: 1px solid var(--color-border);
   transition: border-color var(--transition-slow);
 }
@@ -1491,18 +1519,45 @@ code {
   border-bottom: none;
 }
 
-.honor-title {
-  font-size: 0.9375rem;
-  font-weight: 600;
-  color: var(--color-text);
+.honor-accent {
+  width: 4px;
+  height: 36px;
+  border-radius: 2px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  background: #94a3b8;
+  transition: background var(--transition-slow);
+}
+
+[data-theme="dark"] .honor-accent {
+  background: #64748b;
+}
+
+.honor-body {
   flex: 1;
+  min-width: 0;
+}
+
+.honor-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 3px;
+  line-height: 1.4;
+  transition: color var(--transition-slow);
+}
+
+.honor-event {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
+  margin-bottom: 3px;
   transition: color var(--transition-slow);
 }
 
 .honor-meta {
   font-size: 0.8125rem;
-  color: var(--color-text-subtle);
-  white-space: nowrap;
+  font-weight: 600;
+  color: var(--color-text-faint);
   transition: color var(--transition-slow);
 }
 
@@ -2129,13 +2184,17 @@ code {
 
   /* Stats row on mobile: keep flex with dividers */
   .stats-row {
-    gap: 12px;
+    gap: 16px 20px;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   .stat-divider {
     height: 28px;
+  }
+
+  .stat-divider:nth-child(6) {
+    display: none;
   }
 
   /* Contact links: 2-column on tablet */
@@ -2373,11 +2432,13 @@ code {
 }
 
 /* Dark mode: award accent overrides */
-[data-theme="dark"] .award-accent.gold   { background: #fbbf24; }
-[data-theme="dark"] .award-accent.silver { background: #64748b; }
-[data-theme="dark"] .award-accent.blue   { background: #60a5fa; }
-[data-theme="dark"] .award-card[data-rank="1st"] .award-card-accent { background: #fbbf24; }
-[data-theme="dark"] .award-card[data-rank="2nd"] .award-card-accent { background: #64748b; }
+[data-theme="dark"] .award-accent.gold,
+[data-theme="dark"] .award-accent.silver,
+[data-theme="dark"] .award-accent.blue   { background: #64748b; }
+[data-theme="dark"] .award-card[data-rank="1st"] .award-card-accent,
+[data-theme="dark"] .award-card[data-rank="2nd"] .award-card-accent,
+[data-theme="dark"] .award-card[data-rank="top"] .award-card-accent,
+[data-theme="dark"] .award-card[data-rank="other"] .award-card-accent { background: #64748b; }
 
 /* Dark mode: no-image placeholder icon */
 [data-theme="dark"] .research-card-image.no-image::after {
@@ -2464,25 +2525,38 @@ code {
   background: var(--color-bg-card, var(--color-bg));
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 32px;
+  padding: 36px 32px 28px;
   transition: border-color var(--transition-slow), background var(--transition-slow);
 }
 
 .citation-stats {
   display: flex;
   justify-content: center;
-  gap: 48px;
-  margin-bottom: 32px;
+  gap: 0;
+  margin-bottom: 36px;
 }
 
 .citation-stat {
   text-align: center;
+  padding: 0 36px;
+  position: relative;
+}
+
+.citation-stat + .citation-stat::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 36px;
+  background: var(--color-border);
 }
 
 .citation-stat-num {
   display: block;
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 2.25rem;
   font-weight: 800;
   color: var(--color-accent);
   line-height: 1.2;
@@ -2494,15 +2568,54 @@ code {
   color: var(--color-text-subtle);
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  margin-top: 2px;
+}
+
+.citation-chart-area {
+  position: relative;
+  padding-left: 40px;
+}
+
+.citation-grid-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 30px;
+  pointer-events: none;
+}
+
+.citation-grid-line {
+  position: absolute;
+  left: 40px;
+  right: 0;
+  height: 1px;
+  background: var(--color-border);
+  opacity: 0.45;
+}
+
+.citation-grid-label {
+  position: absolute;
+  left: 0;
+  transform: translateY(50%);
+  font-size: 0.625rem;
+  font-weight: 600;
+  color: var(--color-text-subtle);
+  opacity: 0.6;
+  width: 34px;
+  text-align: right;
+  line-height: 1;
 }
 
 .citation-chart {
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  gap: 6px;
-  height: 180px;
-  padding: 0 8px;
+  gap: 8px;
+  height: 200px;
+  padding: 0;
+  position: relative;
+  z-index: 1;
 }
 
 .citation-bar-group {
@@ -2510,17 +2623,24 @@ code {
   flex-direction: column;
   align-items: center;
   flex: 1;
-  max-width: 60px;
+  max-width: 72px;
+  cursor: pointer;
 }
 
 .citation-bar-count {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 700;
-  color: var(--color-text-subtle);
-  margin-bottom: 4px;
+  color: var(--color-accent);
+  margin-bottom: 6px;
   opacity: 0;
-  transform: translateY(4px);
-  transition: opacity 0.3s, transform 0.3s;
+  transform: translateY(6px);
+  transition: opacity 0.4s, transform 0.4s;
+}
+
+.citation-bar.animate ~ .citation-bar-year,
+.citation-bar-count.show {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .citation-bar-group:hover .citation-bar-count {
@@ -2530,17 +2650,17 @@ code {
 
 .citation-bar {
   width: 100%;
-  background: var(--color-accent);
-  border-radius: 4px 4px 0 0;
+  background: linear-gradient(180deg, var(--color-accent), color-mix(in srgb, var(--color-accent) 65%, transparent));
+  border-radius: 6px 6px 0 0;
   min-height: 4px;
   transform-origin: bottom;
   transform: scaleY(0);
-  transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s;
+  transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s;
+  position: relative;
 }
 
 .citation-bar-group:hover .citation-bar {
-  background: var(--color-accent-hover, var(--color-accent));
-  filter: brightness(1.15);
+  filter: brightness(1.2);
 }
 
 .citation-bar.animate {
@@ -2548,33 +2668,82 @@ code {
 }
 
 .citation-bar-year {
-  font-size: 0.6875rem;
+  font-size: 0.75rem;
   font-weight: 600;
   color: var(--color-text-subtle);
-  margin-top: 8px;
+  margin-top: 10px;
+}
+
+.citation-bar-group:hover .citation-bar-year {
+  color: var(--color-text);
+}
+
+.citation-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--color-border);
 }
 
 .citation-source {
-  text-align: right;
+  font-size: 0.75rem;
+  color: var(--color-text-subtle);
+  opacity: 0.7;
+  margin: 0;
+}
+
+.citation-source a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.citation-source a:hover {
+  text-decoration: underline;
+}
+
+.citation-updated {
   font-size: 0.6875rem;
   color: var(--color-text-subtle);
-  margin-top: 16px;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 @media (max-width: 768px) {
   .citation-stats {
-    gap: 24px;
+    gap: 0;
+  }
+  .citation-stat {
+    padding: 0 20px;
+  }
+  .citation-stat + .citation-stat::before {
+    height: 28px;
   }
   .citation-stat-num {
     font-size: 1.5rem;
   }
   .citation-chart {
-    height: 140px;
-    gap: 4px;
+    height: 160px;
+    gap: 5px;
   }
   .citation-chart-wrap {
-    padding: 20px;
+    padding: 24px 16px 20px;
+  }
+  .citation-chart-area {
+    padding-left: 32px;
+  }
+  .citation-grid-line {
+    left: 32px;
+  }
+  .citation-grid-label {
+    width: 26px;
+    font-size: 0.5625rem;
+  }
+  .citation-footer {
+    flex-direction: column;
+    gap: 4px;
+    align-items: flex-start;
   }
 }
 

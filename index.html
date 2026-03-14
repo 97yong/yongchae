@@ -241,10 +241,16 @@
               <span class="citation-stat-label">i10-index</span>
             </div>
           </div>
-          <div class="citation-chart" id="citationChart">
-            <!-- Rendered by JS -->
+          <div class="citation-chart-area">
+            <div class="citation-grid-lines" id="citGridLines"></div>
+            <div class="citation-chart" id="citationChart">
+              <!-- Rendered by JS -->
+            </div>
           </div>
-          <p class="citation-source">Source: Google Scholar</p>
+          <div class="citation-footer">
+            <p class="citation-source">Source: <a href="https://scholar.google.com/citations?user=qex9tLkAAAAJ" target="_blank" rel="noopener">Google Scholar</a></p>
+            <span class="citation-updated" id="citUpdated"></span>
+          </div>
         </div>
       </section>
 
@@ -318,16 +324,44 @@
         if (elHIndex) animateCount(elHIndex, cit.hIndex || 0);
         if (elI10)    animateCount(elI10,    cit.i10Index || 0);
 
+        // Last updated
+        const updEl = document.getElementById('citUpdated');
+        if (updEl && cit.lastUpdated) {
+          updEl.textContent = 'Updated: ' + cit.lastUpdated;
+        }
+
         const chart = document.getElementById('citationChart');
+        const gridLines = document.getElementById('citGridLines');
         const years = Object.keys(cit.citesPerYear || {}).sort();
         if (chart && years.length > 0) {
           const counts = years.map(y => cit.citesPerYear[y]);
           const maxCount = Math.max(...counts, 1);
-          const chartHeight = chart.clientHeight || 180;
+          const chartHeight = chart.clientHeight || 200;
+
+          // Draw horizontal grid lines at round intervals (10, 20, 30...)
+          if (gridLines) {
+            var interval = maxCount <= 50 ? 10 : maxCount <= 100 ? 20 : maxCount <= 200 ? 25 : 50;
+            var gridMax = Math.ceil(maxCount / interval) * interval;
+            for (var g = 0; g <= gridMax; g += interval) {
+              var pct = (g / gridMax) * 100;
+              var line = document.createElement('div');
+              line.className = 'citation-grid-line';
+              line.style.bottom = pct + '%';
+              gridLines.appendChild(line);
+              var label = document.createElement('div');
+              label.className = 'citation-grid-label';
+              label.style.bottom = pct + '%';
+              label.textContent = g;
+              gridLines.appendChild(label);
+            }
+          }
+
+          // Use gridMax for bar height calculation
+          var barMax = Math.ceil(maxCount / (maxCount <= 50 ? 10 : maxCount <= 100 ? 20 : maxCount <= 200 ? 25 : 50)) * (maxCount <= 50 ? 10 : maxCount <= 100 ? 20 : maxCount <= 200 ? 25 : 50);
 
           years.forEach(function(year, i) {
             const count = counts[i];
-            const heightPct = Math.max(count / maxCount, count > 0 ? 0.02 : 0);
+            const barHeight = barMax > 0 ? Math.max((count / barMax) * (chartHeight - 30), count > 0 ? 4 : 0) : 0;
 
             const group = document.createElement('div');
             group.className = 'citation-bar-group';
@@ -338,8 +372,8 @@
 
             const bar = document.createElement('div');
             bar.className = 'citation-bar';
-            bar.style.height = (heightPct * (chartHeight - 32)) + 'px';
-            bar.style.transitionDelay = (i * 0.1) + 's';
+            bar.style.height = barHeight + 'px';
+            bar.style.transitionDelay = (i * 0.12) + 's';
 
             const yearEl = document.createElement('div');
             yearEl.className = 'citation-bar-year';
@@ -351,13 +385,18 @@
             chart.appendChild(group);
           });
 
-          // Animate bars when scrolled into view
+          // Animate bars + show counts when scrolled into view
           const observer = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
               if (entry.isIntersecting) {
                 chart.querySelectorAll('.citation-bar').forEach(function(b) {
                   b.classList.add('animate');
                 });
+                setTimeout(function() {
+                  chart.querySelectorAll('.citation-bar-count').forEach(function(c) {
+                    c.classList.add('show');
+                  });
+                }, 600);
                 observer.disconnect();
               }
             });

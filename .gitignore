@@ -6,3 +6,6 @@ download-images.html
 
 # OMC working files
 .omc/
+
+# Agent config - keep private
+AGENTS.md

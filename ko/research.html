@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>연구 | 김용채</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/ko/" class="nav-brand">김용채</a>
+      <div class="nav-links">
+        <a href="/ko/"              data-page="index">홈</a>
+        <a href="/ko/cv.html"       data-page="cv">이력서</a>
+        <a href="/ko/research.html" data-page="research">연구</a>
+        <a href="/ko/awards.html"   data-page="awards">수상</a>
+        <a href="/ko/contact.html"  data-page="contact">연락처</a>
+      </div>
+      <a href="/research.html" class="lang-toggle" aria-label="Switch to English">EN</a>
+      <button id="themeToggle" class="theme-toggle" aria-label="Switch to dark mode">&#9789;</button>
+      <button id="navToggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/ko/"              data-page="index">홈</a>
+    <a href="/ko/cv.html"       data-page="cv">이력서</a>
+    <a href="/ko/research.html" data-page="research">연구</a>
+    <a href="/ko/awards.html"   data-page="awards">수상</a>
+    <a href="/ko/contact.html"  data-page="contact">연락처</a>
+    <button class="mobile-theme-toggle" id="mobileThemeToggle" aria-label="Toggle theme"><span class="theme-icon">&#9789;</span> 다크 모드</button>
+  </div>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <h1 class="page-title fade-in">연구</h1>
+        <p class="page-subtitle fade-in" data-delay="1">기계공학 분야에서 AI 기반 PHM (고장 예지 및 건전성 관리) 연구를 수행하고 있습니다.</p>
+      </div>
+    </section>
+
+    <section class="research-section">
+      <div class="container">
+        <div class="filter-tabs fade-in">
+          <button class="filter-btn active" data-filter="all">전체</button>
+          <button class="filter-btn" data-filter="first">제1저자</button>
+          <button class="filter-btn" data-filter="co">공동저자</button>
+          <button class="filter-btn" data-filter="ongoing">진행중</button>
+          <button class="filter-btn" data-filter="project">프로젝트</button>
+        </div>
+
+        <div id="researchGrid" class="research-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 김용채. All rights reserved.</p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const data = await loadJSON('../data/research.json');
+      renderResearch('researchGrid', data);
+    });
+  </script>
+</body>
+</html>

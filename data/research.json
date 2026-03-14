@@ -10,7 +10,7 @@
           "description": "Combines physics-based polynomial wear modeling with transformer architecture to predict tool remaining useful life. Uses adaptive labeling and KDE-based ensemble of 10 models.",
           "relatedPaper": "J11",
           "link": "https://doi.org/10.1007/s40684-025-00827-9",
-          "image": "images/research/unnamed (1).png",
+          "image": "/images/research/unnamed (1).png",
           "imgAdjust": {
             "zoom": 100,
             "posX": 50,
@@ -22,21 +22,21 @@
           "description": "Addresses unsupervised domain adaptation by reducing local distribution discrepancies through sequential minority region alignment and pseudo-label generation.",
           "relatedPaper": "J7",
           "link": "https://doi.org/10.1016/j.aei.2024.102862",
-          "image": "images/research/lsada.jpg"
+          "image": "/images/research/lsada.jpg"
         },
         {
           "title": "Gradient Alignment Partial Domain Adaptation (GAPDA)",
           "description": "Partial domain adaptation with domain knowledge filter reflecting fault characteristics and gradient alignment module for statistical loss alignment.",
           "relatedPaper": "J5",
           "link": "https://doi.org/10.1016/j.ress.2024.110293",
-          "image": "images/research/gapda.jpg"
+          "image": "/images/research/gapda.jpg"
         },
         {
           "title": "Domain Adaptation for Rock Drill Fault Diagnosis",
           "description": "Combines domain adversarial neural networks with MMD minimization and data-cropping for variable-length measurements. 2nd place in PHM 2022 Data Challenge.",
           "relatedPaper": "J2",
           "link": "https://doi.org/10.36001/ijphm.2023.v14i2.3425",
-          "image": "images/research/ijphm.png"
+          "image": "/images/research/ijphm.png"
         }
       ]
     },
@@ -49,49 +49,49 @@
           "description": "Unsupervised vibration signal denoising under industrial noise using frequency attention, noise prediction, and variance scaling.",
           "relatedPaper": "J10",
           "link": "https://doi.org/10.1016/j.ymssp.2025.113726",
-          "image": "images/research/ardiff.png"
+          "image": "/images/research/ardiff.png"
         },
         {
           "title": "Battery Maximum Available Capacity Estimation",
           "description": "Partial charge matrix framework with state discriminator for MAC estimation, achieving 9.7% improvement using short-term charging data.",
           "relatedPaper": "J9",
           "link": "https://doi.org/10.1016/j.est.2025.118726",
-          "image": "images/research/battery.png"
+          "image": "/images/research/battery.png"
         },
         {
           "title": "Deep Learning-Based Tacholess Speed Estimation",
           "description": "Domain-informed framework using Selective Multi-Order Frequency module and multi-harmonic loss for robust IAS estimation.",
           "relatedPaper": "J8",
           "link": "https://doi.org/10.1109/JSEN.2025.3607036",
-          "image": "images/research/sensors.png"
+          "image": "/images/research/sensors.png"
         },
         {
           "title": "Spectrum-Guided GAN with Density-Directionality Sampling",
           "description": "Addresses GAN training instability through spectral loss and selective latent vector sampling for high-fidelity fault signal generation.",
           "relatedPaper": "J6",
           "link": "https://doi.org/10.1016/j.aei.2024.102821",
-          "image": "images/research/gan.png"
+          "image": "/images/research/gan.png"
         },
         {
           "title": "Domain Adaptation with Label-Aligned Sampling (DALAS)",
           "description": "Combines domain adversarial learning with label-aligned sampling and metric learning for imbalanced cross-domain fault diagnosis.",
           "relatedPaper": "J4",
           "link": "https://doi.org/10.1016/j.eswa.2023.122910",
-          "image": "images/research/dalas.jpg"
+          "image": "/images/research/dalas.jpg"
         },
         {
           "title": "Frequency-Learning Generative Network (FLGN)",
           "description": "Decomposes frequency into deterministic and stochastic components, enabling generation of variable-length signals with learned frequency characteristics.",
           "relatedPaper": "J3",
           "link": "https://doi.org/10.1016/j.eswa.2023.120255",
-          "image": "images/research/flgn.jpg"
+          "image": "/images/research/flgn.jpg"
         },
         {
           "title": "Deep Learning-Based Fault Detection for Injection Molding",
           "description": "Supervised learning with class-balancing loss and feature-similarity-based recipe optimization for molding processes.",
           "relatedPaper": "J1",
           "link": "https://doi.org/10.1093/jcde/qwad011",
-          "image": "images/research/class-imbalance.png"
+          "image": "/images/research/class-imbalance.png"
         }
       ]
     },
@@ -104,14 +104,14 @@
           "description": "Detecting data drift in bearing signals by generating feature map-based images using simulation signals and applying YOLO object detection for condition estimation.",
           "relatedPaper": "",
           "link": "",
-          "image": "images/research/datadrift.png"
+          "image": "/images/research/datadrift.png"
         },
         {
           "title": "Vision-based Motion Magnification",
           "description": "Diagnostic method using time-frequency filtering to amplify specific frequencies, enabling accurate fault detection through measurable displacement.",
           "relatedPaper": "",
           "link": "",
-          "image": "images/research/vision.png"
+          "image": "/images/research/vision.png"
         }
       ]
     },
@@ -124,35 +124,35 @@
           "description": "Large-scale multimodal foundation model for time-series, image, and text data from diverse manufacturing processes. Joint effort by POSTECH, SNU, KAIST, and KETI.",
           "relatedPaper": "",
           "link": "",
-          "image": "images/research/mfm.png"
+          "image": "/images/research/mfm.png"
         },
         {
           "title": "AI for Data Drift Management in Rotating Machinery",
           "description": "Integrating physical knowledge-based drift detection, domain-informed AI algorithms, and adaptive retraining. Validated using pump testbed.",
           "relatedPaper": "",
           "link": "",
-          "image": "images/research/drift_scholar.png"
+          "image": "/images/research/drift_scholar.png"
         },
         {
           "title": "Purpose-Built Electric Vehicles (PBV)",
           "description": "Deep learning for road diagnostics including anomaly detection via video, pothole identification through edge processing, and point cloud for road severity.",
           "relatedPaper": "",
           "link": "",
-          "image": "images/research/pbv.png"
+          "image": "/images/research/pbv.png"
         },
         {
           "title": "Deep Learning Framework for Industrial Data",
           "description": "Automatic selection of optimal model and parameters using partial domain adaptation and self-supervised learning, validated with real industrial motor data.",
           "relatedPaper": "",
           "link": "",
-          "image": "images/research/onep.png"
+          "image": "/images/research/onep.png"
         },
         {
           "title": "AI-Driven Diagnosis of Aircraft Anomalies",
           "description": "PHM using Flight Data Recorder analysis with correlation matrix approach and autoencoder models for anomaly detection and engine degradation prediction.",
           "relatedPaper": "",
           "link": "",
-          "image": "images/research/kai.png"
+          "image": "/images/research/kai.png"
         }
       ]
     }

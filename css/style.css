@@ -316,6 +316,32 @@ code {
 .theme-toggle .icon-sun  { display: block; }
 .theme-toggle .icon-moon { display: none; }
 
+/* Language toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 36px;
+  padding: 0 10px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-inset);
+  border: 1px solid var(--color-border);
+  color: var(--color-text-subtle);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  flex-shrink: 0;
+  transition: background var(--transition), border-color var(--transition),
+              color var(--transition);
+}
+
+.lang-toggle:hover {
+  background: var(--color-bg-subtle);
+  border-color: var(--color-border-strong);
+  color: var(--color-text);
+}
+
 /* Hamburger -- mobile only */
 .hamburger {
   display: none;
@@ -1005,7 +1031,46 @@ code {
   transition: color var(--transition-slow);
 }
 
-/* Reviewer tags */
+/* CV subsections */
+.cv-subsection {
+  margin-bottom: 28px;
+}
+
+.cv-subsection:last-child {
+  margin-bottom: 0;
+}
+
+.subsection-title {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--color-border);
+  transition: color var(--transition-slow), border-color var(--transition-slow);
+}
+
+/* Reviewer list */
+.reviewer-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.reviewer-item {
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  padding: 10px 0;
+  border-bottom: 1px solid var(--color-border);
+  transition: color var(--transition-slow), border-color var(--transition-slow);
+}
+
+.reviewer-item:last-child {
+  border-bottom: none;
+}
+
+/* Reviewer tags (legacy) */
 .reviewer-tags {
   display: flex;
   flex-wrap: wrap;
@@ -1982,9 +2047,12 @@ code {
     display: none;
   }
 
+  .lang-toggle {
+    margin-left: auto;
+  }
+
   .hamburger {
     display: flex;
-    margin-left: auto;
   }
 
   /* Hero: stack vertically, photo on top */

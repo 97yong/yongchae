@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>404 — Page Not Found | Yong Chae Kim</title>
+  <meta name="description" content="Page not found. Return to Yong Chae Kim's homepage." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Source+Serif+4:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="stylesheet" href="css/style.css?v=3" />
+  <style>
+    .error-section {
+      min-height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 80px 24px;
+    }
+    .error-code {
+      font-family: var(--font-heading);
+      font-size: clamp(80px, 15vw, 160px);
+      font-weight: 800;
+      color: var(--color-border-strong);
+      line-height: 1;
+      margin-bottom: 16px;
+    }
+    .error-title {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 12px;
+    }
+    .error-desc {
+      font-size: 16px;
+      color: var(--color-text-subtle);
+      margin-bottom: 32px;
+      max-width: 420px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .error-home-btn {
+      display: inline-block;
+      padding: 12px 32px;
+      background: var(--color-accent);
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .error-home-btn:hover {
+      background: var(--color-accent-hover);
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand">Yong Chae Kim</a>
+      <div class="nav-links">
+        <a href="/"    data-page="index">Home</a>
+        <a href="cv.html"       data-page="cv">CV</a>
+        <a href="research.html" data-page="research">Research</a>
+        <a href="awards.html"   data-page="awards">Awards</a>
+        <a href="contact.html"  data-page="contact">Contact</a>
+      </div>
+      <button id="themeToggle" class="theme-toggle" aria-label="Switch to dark mode">&#9789;</button>
+      <button id="navToggle" class="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/"    data-page="index">Home</a>
+    <a href="cv.html"       data-page="cv">CV</a>
+    <a href="research.html" data-page="research">Research</a>
+    <a href="awards.html"   data-page="awards">Awards</a>
+    <a href="contact.html"  data-page="contact">Contact</a>
+    <button class="mobile-theme-toggle" id="mobileThemeToggle" aria-label="Toggle theme"><span class="theme-icon">&#9789;</span> Dark Mode</button>
+  </div>
+
+  <main>
+    <section class="error-section">
+      <div>
+        <div class="error-code fade-in">404</div>
+        <h1 class="error-title fade-in" data-delay="1">Page Not Found</h1>
+        <p class="error-desc fade-in" data-delay="2">The page you're looking for doesn't exist or has been moved.</p>
+        <a href="/" class="error-home-btn fade-in" data-delay="3">Back to Home</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Yong Chae Kim. All rights reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

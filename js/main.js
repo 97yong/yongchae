@@ -387,3 +387,44 @@ function renderAwards(containerId, data) {
 window.renderAwards = renderAwards;
 
 
+/* =========================================================
+   10. PAGE TRANSITION ANIMATION
+   ========================================================= */
+
+(function initPageTransition() {
+  document.addEventListener('DOMContentLoaded', function () {
+    // Create transition overlay
+    var overlay = document.createElement('div');
+    overlay.className = 'page-transition';
+    document.body.appendChild(overlay);
+
+    // Intercept internal link clicks for smooth transition
+    document.addEventListener('click', function (e) {
+      var link = e.target.closest('a');
+      if (!link) return;
+
+      var href = link.getAttribute('href');
+      if (!href) return;
+
+      // Skip external links, anchors, mailto, tel, javascript, and new-tab links
+      if (link.target === '_blank' ||
+          link.hasAttribute('download') ||
+          href.startsWith('http') ||
+          href.startsWith('mailto:') ||
+          href.startsWith('tel:') ||
+          href.startsWith('#') ||
+          href.startsWith('javascript:')) {
+        return;
+      }
+
+      e.preventDefault();
+      overlay.classList.add('active');
+
+      setTimeout(function () {
+        window.location.href = href;
+      }, 300);
+    });
+  });
+})();
+
+

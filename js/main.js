@@ -387,4 +387,52 @@ function renderAwards(containerId, data) {
 window.renderAwards = renderAwards;
 
 
+/* =========================================================
+   10. NAV SCROLL SHADOW & BACK TO TOP BUTTON
+   ========================================================= */
+
+document.addEventListener('DOMContentLoaded', function () {
+  var nav = document.querySelector('.site-nav');
+
+  // Create Back to Top button
+  var btn = document.createElement('button');
+  btn.className = 'back-to-top';
+  btn.setAttribute('aria-label', 'Back to top');
+  btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>';
+  document.body.appendChild(btn);
+
+  btn.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+
+  // Scroll handler for nav shadow + back-to-top visibility
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (!ticking) {
+      requestAnimationFrame(function () {
+        var scrollY = window.scrollY || window.pageYOffset;
+
+        // Nav shadow
+        if (nav) {
+          if (scrollY > 10) {
+            nav.classList.add('scrolled');
+          } else {
+            nav.classList.remove('scrolled');
+          }
+        }
+
+        // Back to top
+        if (scrollY > 400) {
+          btn.classList.add('visible');
+        } else {
+          btn.classList.remove('visible');
+        }
+
+        ticking = false;
+      });
+      ticking = true;
+    }
+  });
+});
+
 

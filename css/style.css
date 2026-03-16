@@ -94,6 +94,7 @@ html {
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
+  overflow-y: scroll;
 }
 
 body {
@@ -2754,24 +2755,9 @@ code {
    PAGE TRANSITION ANIMATION
    ============================================================ */
 
-.page-transition {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background: var(--color-bg);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-}
-
-.page-transition.active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-/* On page load, fade the body in */
-body {
-  animation: pageEnter 0.35s ease both;
+/* Smooth entrance for main content only */
+main {
+  animation: pageEnter 0.4s ease both;
 }
 
 @keyframes pageEnter {

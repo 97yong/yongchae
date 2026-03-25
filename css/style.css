@@ -1727,8 +1727,6 @@ code {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   gap: 20px;
-  max-width: var(--page-max);
-  margin: 0 auto;
 }
 
 .program-card {

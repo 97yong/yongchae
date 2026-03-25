@@ -1716,6 +1716,105 @@ code {
 
 
 /* ============================================================
+   10b. PROGRAM SECTION
+   ============================================================ */
+
+.program-section {
+  padding: 48px 0 56px;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 20px;
+  max-width: var(--page-max);
+  margin: 0 auto;
+}
+
+.program-card {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 22px 24px;
+  background: var(--color-surface);
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  color: var(--color-text);
+  transition: border-color var(--transition), box-shadow var(--transition),
+              transform var(--transition), background var(--transition);
+}
+
+.program-card:hover {
+  border-color: var(--color-accent-border);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+  color: var(--color-text);
+}
+
+.program-card-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-accent-subtle);
+  border-radius: var(--radius-md);
+  color: var(--color-accent);
+  transition: background var(--transition), color var(--transition);
+}
+
+.program-card:hover .program-card-icon {
+  background: var(--color-accent);
+  color: #fff;
+}
+
+.program-card-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.program-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.program-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: var(--color-text);
+  transition: color var(--transition);
+}
+
+.program-card-desc {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--color-text-subtle);
+  transition: color var(--transition);
+}
+
+.program-card-arrow {
+  flex-shrink: 0;
+  font-size: 1.25rem;
+  color: var(--color-text-faint);
+  transition: color var(--transition), transform var(--transition);
+}
+
+.program-card:hover .program-card-arrow {
+  color: var(--color-accent);
+  transform: translateX(4px);
+}
+
+@media (max-width: 640px) {
+  .program-section { padding: 32px 0 40px; }
+  .program-grid { grid-template-columns: 1fr; }
+}
+
+
+/* ============================================================
    11. CONTACT PAGE
    ============================================================ */
 

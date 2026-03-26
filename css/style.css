@@ -1779,7 +1779,7 @@ code {
 }
 
 .program-card-title {
-  font-family: var(--font-heading);
+  font-family: var(--font-sans);
   font-size: 1.0625rem;
   font-weight: 600;
   margin-bottom: 4px;

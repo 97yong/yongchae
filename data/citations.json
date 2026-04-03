@@ -1,7 +1,12 @@
 {
-  "lastUpdated": "2026-03-30",
-  "totalCitations": 0,
-  "hIndex": 0,
-  "i10Index": 0,
-  "citesPerYear": {}
+  "lastUpdated": "2026-04-03",
+  "totalCitations": 162,
+  "hIndex": 7,
+  "i10Index": 5,
+  "citesPerYear": {
+    "2023": 5,
+    "2024": 27,
+    "2025": 83,
+    "2026": 47
+  }
 }

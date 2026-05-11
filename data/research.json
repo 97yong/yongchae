@@ -8,7 +8,7 @@
         {
           "title": "Kernel Density Estimation Ensemble-Based RUL Prediction",
           "description": "Combines physics-based polynomial wear modeling with transformer architecture to predict tool remaining useful life. Uses adaptive labeling and KDE-based ensemble of 10 models.",
-          "relatedPaper": "J11",
+          "relatedPaper": "J1",
           "link": "https://doi.org/10.1007/s40684-025-00827-9",
           "image": "/images/research/unnamed (1).png",
           "imgAdjust": {
@@ -20,21 +20,21 @@
         {
           "title": "Latent Space Alignment Domain Adaptation (LSADA)",
           "description": "Addresses unsupervised domain adaptation by reducing local distribution discrepancies through sequential minority region alignment and pseudo-label generation.",
-          "relatedPaper": "J7",
+          "relatedPaper": "J5",
           "link": "https://doi.org/10.1016/j.aei.2024.102862",
           "image": "/images/research/lsada.jpg"
         },
         {
           "title": "Gradient Alignment Partial Domain Adaptation (GAPDA)",
           "description": "Partial domain adaptation with domain knowledge filter reflecting fault characteristics and gradient alignment module for statistical loss alignment.",
-          "relatedPaper": "J5",
+          "relatedPaper": "J7",
           "link": "https://doi.org/10.1016/j.ress.2024.110293",
           "image": "/images/research/gapda.jpg"
         },
         {
           "title": "Domain Adaptation for Rock Drill Fault Diagnosis",
           "description": "Combines domain adversarial neural networks with MMD minimization and data-cropping for variable-length measurements. 2nd place in PHM 2022 Data Challenge.",
-          "relatedPaper": "J2",
+          "relatedPaper": "J10",
           "link": "https://doi.org/10.36001/ijphm.2023.v14i2.3425",
           "image": "/images/research/ijphm.png"
         }
@@ -47,21 +47,21 @@
         {
           "title": "ARDiff: Adaptive Reverse-Step Diffusion Framework",
           "description": "Unsupervised vibration signal denoising under industrial noise using frequency attention, noise prediction, and variance scaling.",
-          "relatedPaper": "J10",
+          "relatedPaper": "J2",
           "link": "https://doi.org/10.1016/j.ymssp.2025.113726",
           "image": "/images/research/ardiff.png"
         },
         {
           "title": "Battery Maximum Available Capacity Estimation",
           "description": "Partial charge matrix framework with state discriminator for MAC estimation, achieving 9.7% improvement using short-term charging data.",
-          "relatedPaper": "J9",
+          "relatedPaper": "J3",
           "link": "https://doi.org/10.1016/j.est.2025.118726",
           "image": "/images/research/battery.png"
         },
         {
           "title": "Deep Learning-Based Tacholess Speed Estimation",
           "description": "Domain-informed framework using Selective Multi-Order Frequency module and multi-harmonic loss for robust IAS estimation.",
-          "relatedPaper": "J8",
+          "relatedPaper": "J4",
           "link": "https://doi.org/10.1109/JSEN.2025.3607036",
           "image": "/images/research/sensors.png"
         },
@@ -75,21 +75,21 @@
         {
           "title": "Domain Adaptation with Label-Aligned Sampling (DALAS)",
           "description": "Combines domain adversarial learning with label-aligned sampling and metric learning for imbalanced cross-domain fault diagnosis.",
-          "relatedPaper": "J4",
+          "relatedPaper": "J8",
           "link": "https://doi.org/10.1016/j.eswa.2023.122910",
           "image": "/images/research/dalas.jpg"
         },
         {
           "title": "Frequency-Learning Generative Network (FLGN)",
           "description": "Decomposes frequency into deterministic and stochastic components, enabling generation of variable-length signals with learned frequency characteristics.",
-          "relatedPaper": "J3",
+          "relatedPaper": "J9",
           "link": "https://doi.org/10.1016/j.eswa.2023.120255",
           "image": "/images/research/flgn.jpg"
         },
         {
           "title": "Deep Learning-Based Fault Detection for Injection Molding",
           "description": "Supervised learning with class-balancing loss and feature-similarity-based recipe optimization for molding processes.",
-          "relatedPaper": "J1",
+          "relatedPaper": "J11",
           "link": "https://doi.org/10.1093/jcde/qwad011",
           "image": "/images/research/class-imbalance.png"
         }

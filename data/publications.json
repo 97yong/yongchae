@@ -1,7 +1,7 @@
 {
   "journals": [
     {
-      "id": "J11",
+      "id": "J1",
       "title": "Physics-guided deep ensemble learning for the remaining useful life prediction of machine tools using kernel density estimation",
       "authors": "Kim, Y.C., Kim, B., Kim, M., Lee, S.K., Jung, J.H., & Youn, B.D.",
       "year": "Online Published",
@@ -13,7 +13,7 @@
       "link": "https://doi.org/10.1007/s40684-025-00827-9"
     },
     {
-      "id": "J10",
+      "id": "J2",
       "title": "ARDiff: An Adaptive Reverse-Step Diffusion Framework for Unsupervised Vibration Signal Denoising with Frequency Attention",
       "authors": "Kim, J., Kim, Y.C., Lee, J., Baek, J., Jung, J.H., & Youn, B.D.",
       "year": "2026.01",
@@ -25,7 +25,7 @@
       "link": "https://doi.org/10.1016/j.ymssp.2025.113726"
     },
     {
-      "id": "J9",
+      "id": "J3",
       "title": "Battery Maximum Available Capacity Estimation in Partial Charge Curve with Current Charge State Invariant Feature",
       "authors": "Kim, B., Kim, Y.C., Choi, H., Kim, T., & Youn, B.D.",
       "year": "2025.12",
@@ -37,7 +37,7 @@
       "link": "https://doi.org/10.1016/j.est.2025.118726"
     },
     {
-      "id": "J8",
+      "id": "J4",
       "title": "Deep learning-based cross-domain tacholess instantaneous speed estimation of rotating machinery with a selective multi-order frequency",
       "authors": "Kim, M., Kim, Y.C., Park, J., Yoo, J., Kim, T., Ha, J.M., & Youn, B.D.",
       "year": "2025.10",
@@ -49,7 +49,7 @@
       "link": "https://doi.org/10.1109/JSEN.2025.3607036"
     },
     {
-      "id": "J7",
+      "id": "J5",
       "title": "Latent Space Alignment based Domain Adaptation (LSADA) for Fault Diagnosis of Rotating Machinery",
       "authors": "Kim, Y.C., Ko, J.U., Lee, J., Kim, T., Jung, J.H., & Youn, B.D.",
       "year": "2024.10",
@@ -73,7 +73,7 @@
       "link": "https://doi.org/10.1016/j.aei.2024.102821"
     },
     {
-      "id": "J5",
+      "id": "J7",
       "title": "Gradient Alignment based Partial Domain Adaptation (GAPDA) using a domain knowledge filter for fault diagnosis of bearing",
       "authors": "Kim, Y.C., Lee, J., Kim, T., Baek, J., Ko, J.U., Jung, J.H., & Youn, B.D.",
       "year": "2024.10",
@@ -85,7 +85,7 @@
       "link": "https://doi.org/10.1016/j.ress.2024.110293"
     },
     {
-      "id": "J4",
+      "id": "J8",
       "title": "Domain Adaptation with Label-Aligned Sampling (DALAS) for Cross-Domain Fault Diagnosis Under Class Imbalance",
       "authors": "Lee, J., Ko, J.U., Kim, T., Kim, Y.C., Jung, J.H., & Youn, B.D.",
       "year": "2024.06",
@@ -97,7 +97,7 @@
       "link": "https://doi.org/10.1016/j.eswa.2023.122910"
     },
     {
-      "id": "J3",
+      "id": "J9",
       "title": "Frequency-learning generative network (FLGN) to generate signals of variable lengths",
       "authors": "Ko, J.U., Lee, J., Kim, T., Kim, Y.C., & Youn, B.D.",
       "year": "2023.10",
@@ -109,7 +109,7 @@
       "link": "https://doi.org/10.1016/j.eswa.2023.120255"
     },
     {
-      "id": "J2",
+      "id": "J10",
       "title": "Domain Adaptation based Fault Diagnosis under Variable Operating Conditions of a Rock Drill",
       "authors": "Kim, Y.C., Kim, T., Ko, J.U., Lee, J., & Kim, K.",
       "year": "2023.07",
@@ -120,7 +120,7 @@
       "link": "https://doi.org/10.36001/ijphm.2023.v14i2.3425"
     },
     {
-      "id": "J1",
+      "id": "J11",
       "title": "Deep-learning-based Fault Detection and Recipe Optimization for a Plastic Injection Molding Process Under the Class Imbalance Problem",
       "authors": "Ko, J.U., Lee, J., Kim, T., Kim, Y.C., & Youn, B.D.",
       "year": "2023.04",

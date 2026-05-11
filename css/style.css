@@ -815,7 +815,7 @@ code {
 
 .pub-item {
   display: grid;
-  grid-template-columns: 38px 1fr;
+  grid-template-columns: 52px 1fr;
   gap: 12px;
   padding: 14px 0;
   border-bottom: 1px solid var(--color-border);
@@ -843,7 +843,7 @@ code {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 38px;
+  min-width: 52px;
   height: 26px;
   padding: 0 8px;
   font-size: 0.75rem;
@@ -915,77 +915,64 @@ code {
   transition: color var(--transition-slow);
 }
 
-/* Impact Factor pill - GREEN and prominent */
-.pub-if {
-  display: inline-flex;
-  align-items: center;
-  gap: 3px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--color-green);
-  background: var(--color-green-bg);
-  border: 1.5px solid var(--color-green-border);
-  padding: 3px 10px;
-  border-radius: var(--radius-pill);
-  white-space: nowrap;
-  transition: background var(--transition-slow), border-color var(--transition-slow),
-              color var(--transition-slow);
+.pub-location {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  transition: color var(--transition-slow);
 }
 
+/* Publication meta chips: SCIE / IF / Rank / Award
+   Compact, flat chips — small font, subtle background, light corners. */
+.pub-index,
+.pub-if,
+.pub-rank,
+.pub-award,
+.award-pill,
+.pill-index,
 .pill-if {
   display: inline-flex;
   align-items: center;
-  gap: 3px;
-  font-size: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.6875rem;
   font-weight: 700;
-  color: var(--color-green);
-  background: var(--color-green-bg);
-  border: 1.5px solid var(--color-green-border);
-  padding: 3px 10px;
-  border-radius: var(--radius-pill);
+  letter-spacing: 0.03em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid transparent;
   white-space: nowrap;
   transition: background var(--transition-slow), border-color var(--transition-slow),
               color var(--transition-slow);
 }
 
-.pill-if::before {
-  content: 'IF';
-  font-weight: 800;
-}
-
-/* Award badge on publication */
-.pub-award,
-.award-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--color-gold);
-  background: var(--color-gold-bg);
-  border: 1.5px solid var(--color-gold-border);
-  padding: 3px 10px;
-  border-radius: var(--radius-pill);
-  white-space: nowrap;
-  transition: background var(--transition-slow), border-color var(--transition-slow),
-              color var(--transition-slow);
-}
-
-/* Index type pill (SCIE, ESCI) */
+/* Index (SCIE / ESCI) — accent blue */
 .pub-index,
 .pill-index {
-  display: inline-flex;
-  align-items: center;
-  font-size: 0.75rem;
-  font-weight: 700;
   color: var(--color-accent);
   background: var(--color-accent-subtle);
-  border: 1.5px solid var(--color-accent-border);
-  padding: 3px 10px;
-  border-radius: var(--radius-pill);
-  white-space: nowrap;
-  transition: background var(--transition-slow), border-color var(--transition-slow),
-              color var(--transition-slow);
+  border-color: var(--color-accent-border);
+}
+
+/* Impact Factor — green */
+.pub-if,
+.pill-if {
+  color: var(--color-green);
+  background: var(--color-green-bg);
+  border-color: var(--color-green-border);
+}
+
+/* Rank — neutral subtle */
+.pub-rank {
+  color: var(--color-text-subtle);
+  background: var(--color-bg-subtle);
+  border-color: var(--color-border);
+}
+
+/* Award — gold */
+.pub-award,
+.award-pill {
+  color: var(--color-gold);
+  background: var(--color-gold-bg);
+  border-color: var(--color-gold-border);
 }
 
 /* Patent item */
@@ -2263,7 +2250,7 @@ code {
   /* Pub items */
   .pub-item,
   .patent-item {
-    grid-template-columns: 36px 1fr;
+    grid-template-columns: 50px 1fr;
     gap: 10px;
   }
 

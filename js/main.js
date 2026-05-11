@@ -204,12 +204,12 @@ function _buildPubMeta(pub) {
   if (pub.venue)    html += '<span class="pub-venue">' + pub.venue + '</span>';
   if (pub.location) html += '<span class="pub-location">' + pub.location + '</span>';
   if (pub.year)     html += '<span class="pub-year">' + pub.year + '</span>';
-  if (pub.index)    html += '<span class="pill pub-index">' + pub.index + '</span>';
+  if (pub.index)    html += '<span class="pub-index">' + pub.index + '</span>';
   // Support both "impactFactor" (from JSON) and "IF" field names
   var ifValue = pub.impactFactor || pub.IF;
-  if (ifValue)      html += '<span class="pill pub-if">IF: ' + ifValue + '</span>';
-  if (pub.rank)     html += '<span class="pill pub-rank">Rank: ' + pub.rank + '</span>';
-  if (pub.award)    html += '<span class="pill award-pill">' + pub.award + '</span>';
+  if (ifValue)      html += '<span class="pub-if">IF&nbsp;' + ifValue + '</span>';
+  if (pub.rank)     html += '<span class="pub-rank">Rank&nbsp;' + pub.rank + '</span>';
+  if (pub.award)    html += '<span class="award-pill">' + pub.award + '</span>';
   return html;
 }
 

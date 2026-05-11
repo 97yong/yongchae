@@ -464,6 +464,42 @@
       "venue": "KSME 2025 Annual Meeting",
       "location": "Jeongseon, Korea",
       "firstAuthor": false
+    },
+    {
+      "id": "DCP27",
+      "title": "Continuous Domain Adaptation for Fault Diagnosis of Rotating Machinery under Varying Operating Speeds",
+      "authors": "Kim, Y.C., Kim, J., Park, M., Lim, U., Choi, J., Jung, J.H., & Youn, B.D.",
+      "year": "2026.05",
+      "venue": "KSME 2026 Spring Annual Meeting",
+      "location": "Yeosu, Korea",
+      "firstAuthor": true
+    },
+    {
+      "id": "DCP28",
+      "title": "Target Acoustic Signal Extraction for Equipment Condition Monitoring in Interference Environments",
+      "authors": "Kim, J., Kim, Y.C., Park, M., Lim, U., Choi, J., Jung, J.H., & Youn, B.D.",
+      "year": "2026.05",
+      "venue": "KSME 2026 Spring Annual Meeting",
+      "location": "Yeosu, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP29",
+      "title": "Prompt Expansion based Continual Learning for Bearing Fault Diagnosis",
+      "authors": "Lim, U., Kim, Y.C., Kim, J., Park, M., Choi, J., Jung, J.H., & Youn, B.D.",
+      "year": "2026.05",
+      "venue": "KSME 2026 Spring Annual Meeting",
+      "location": "Yeosu, Korea",
+      "firstAuthor": false
+    },
+    {
+      "id": "DCP30",
+      "title": "Frequency-Aware Token Learning for Rotating Machinery Foundation Models",
+      "authors": "Chae, M., Kim, Y.C., Lee, S.K., Kim, J., Kang, J., Lim, U., Choi, J., Park, J., Park, C.H., Ha, J.M., & Youn, B.D.",
+      "year": "2026.05",
+      "venue": "KSME 2026 Spring Annual Meeting",
+      "location": "Yeosu, Korea",
+      "firstAuthor": false
     }
   ],
   "patents": {

@@ -501,6 +501,15 @@
       "venue": "KSME 2026 Spring Annual Meeting",
       "location": "Yeosu, Korea",
       "firstAuthor": false
+    },
+    {
+      "id": "DCP31",
+      "title": "A Rotating Machinery Foundation Model for High-Frequency Vibration Time Series via Frequency-Axis Token Learning",
+      "authors": "Chae, M., Kim, Y.C., Lee, S.K., Kim, J., Kang, J., Lim, U., Choi, J., Park, J., Park, C.H., Ha, J.M., & Youn, B.D.",
+      "year": "2026.06",
+      "venue": "PHM Korea 2026",
+      "location": "Busan, Korea",
+      "firstAuthor": false
     }
   ],
   "patents": {
